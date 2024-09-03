@@ -4,7 +4,7 @@ layout: default
 33
 <!-- 展示文章列表和部分内容 -->
 {% for post in paginator.posts %}
-  <h1><a href="{{ post.url }}" class="link-dark">{{ post.title }} </a></h1>
+  <h1><a href="{{ post.url }}" class="link-dark">{{ post.title }}</a></h1>
   <p class="author">
         <p>{{ post.excerpt }}</p>
       <p>发表于：{{ post.date | date: "%Y-%m-%d %H:%M:%S" }}</p>

@@ -14,7 +14,9 @@
     <nav>
       <a href="/">賣刀人的博客</a>
     </nav>
-    <h1>{{ page.title }}</h1>
+    <div class="design" id="leftcolumn">
+      <h1><a href="{{ page.url }}" class="link-dark">{{ page.title }}</a></h1>
+    </div>
     <section>
       {{ content }}
     </section>
