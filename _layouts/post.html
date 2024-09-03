@@ -17,11 +17,11 @@ layout: default
   <!-- POST NAVIGATION -->
   <footer class="postNav clearfix">
       {% if page.previous.url %}
-        <a href="{{ page.previous.url }}">上一篇: {{ page.previous.title }}</a>
+      上一篇:  <a href="{{ page.previous.url }}">{{ page.previous.title }}</a>
       {% endif %}
       <br>
       {% if page.next.url %}
-        <a href="{{ page.next.url }}">下一篇: {{ page.next.title }}</a>
+      下一篇:  <a href="{{ page.next.url }}">{{ page.next.title }}</a>
       {% endif %}
   </footer>
 </article>
