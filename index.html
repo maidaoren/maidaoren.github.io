@@ -9,12 +9,10 @@ layout: default
         <p>{{ post.excerpt }}</p>
       <p>发表于：{{ post.date | date: "%Y-%m-%d" }}</p>
   </p>
-<!--   <div class="content">
-    {{ post.content }}
-  </div> -->
+
 {% endfor %}
 
-<!-- Pagination links -->
+<!-- 分頁 -->
 <div class="pagination">
 	<ul class="paginator">
   {% if paginator.previous_page %}
