@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>{{ page.title }}</title>
+  <link rel="stylesheet" href="{{ '/assets/css/bootstrap.css' | relative_url }}">
+<script src="{{ '/assets/js/bootstrap.js' | relative_url }}"></script>    
+  </head>
+  <body>
+    <nav>
+      <a href="/">賣刀人的博客</a>
+      <!-- <a href="/blog/">Blog</a> -->
+    </nav>
+    <h1>{{ page.title }}</h1>
+    <section>
+      {{ content }}
+    </section>
+    <footer>
+      &copy; 賣刀人
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,37 @@
+---
+layout: default
+---
+222
+<!-- This loops through the paginated posts -->
+{% for post in paginator.posts %}
+  <h1><a href="{{ post.url }}" class="link-dark">{{ post.title }} </a></h1>
+  <p class="author">
+        <p>{{ post.excerpt }}</p>
+      <p>发表于：{{ post.date | date: "%Y-%m-%d" }}</p>
+  </p>
+<!--   <div class="content">
+    {{ post.content }}
+  </div> -->
+{% endfor %}
+
+<!-- Pagination links -->
+<div class="pagination">
+	<ul class="paginator">
+  {% if paginator.previous_page %}
+    <a href="{{ paginator.previous_page_path }}" class="previous">
+      上一頁
+    </a>
+  {% else %}
+    <span class="previous">首頁</span>
+  {% endif %}
+  <span class="page_number ">
+     {{ paginator.page }}  {{ paginator.total_pages }}
+  </span>
+  {% if paginator.next_page %}
+    <a href="{{ paginator.next_page_path }}" class="next">下一頁</a>
+  {% else %}
+    <span class="next ">尾頁</span>
+  {% endif %}
+</div>
+
+文章總數： {{ paginator.total_posts }}
