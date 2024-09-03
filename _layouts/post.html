@@ -1,8 +1,6 @@
 ---
 layout: default
 ---
-
-11111
 <article class="post">
   {%- if page.image -%}
     <div class="featuredImage">
@@ -10,20 +8,20 @@ layout: default
       </div>
   {%- endif -%}
   <header>
-    <!-- <h1 class="postTitle">{{ page.title }}</h1> -->
+    <h1><a href="#" class="btn btn-dark">{{ page.title }}</a></h1>
     <p class="meta">{{ page.date | date: "%Y-%m-%d %H:%M:%S" }}</p>
   </header>
 
   {{ content }}
 
   <!-- POST NAVIGATION -->
-  <footer class="container mt-3">
+  <footer class="container mt-2">
     {% if page.previous.url %}
-      上一篇: <a href="{{ page.previous.url }}" class="btn btn-info" role="button">{{ page.previous.title }}</a>
+      上一篇: <a href="{{ page.previous.url }}" class="btn btn-dark" role="button">{{ page.previous.title }}</a>
       {% endif %}
       <br>
       {% if page.next.url %}
-      下一篇: <a href="{{ page.next.url }}" class="btn btn-info" role="button">{{ page.next.title }}</a>
+      下一篇: <a href="{{ page.next.url }}" class="btn btn-dark" role="button">{{ page.next.title }}</a>
       {% endif %}
   </footer>
 </article>
