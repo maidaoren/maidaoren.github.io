@@ -34,19 +34,10 @@ theme: minima
 plugins:
   - jekyll-feed
   - jekyll-paginate
-  - jekyll-toc
 
 # homepage: "home"
 paginate: 5
 paginate_path: "/page:num/"
-
-# jekyll-toc 插件配置
-toc:
-defaults:
-  - scope:
-      path: ""
-    values:
-      toc: true
 
 highlighter: rouge
 markdown: kramdown
