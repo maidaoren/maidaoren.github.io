@@ -41,9 +41,19 @@ paginate_path: "/page:num/"
 
 highlighter: rouge
 markdown: kramdown
+# kramdown:
+#   input: GFM
+#   syntax_highlighter: rouge
+
 kramdown:
-  input: GFM
   syntax_highlighter: rouge
+  syntax_highlighter_opts:   
+    css_class: highlight
+    span:
+      line_numbers: false
+    block:
+      line_numbers: true
+      start_line: 1
 
 # Exclude from processing.
 # The following items will not be processed, by default.
