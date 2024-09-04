@@ -2,15 +2,16 @@
 layout: default
 ---
 <!-- 展示文章列表和部分内容 -->
-{% for post in paginator.posts %}
-  <h1><a href="{{ post.url }}" class="btn btn-dark">{{ post.title }}</a></h1>
-  <p class="author">
-        <p>{{ post.excerpt }}</p>
-      <p>发表于：{{ post.date | date: "%Y-%m-%d %H:%M:%S" }}</p>
-  </p>
-
+    {% for post in paginator.posts %}
+    <div class="list-group list-group-flush border-bottom scrollarea">
+<a href="{{ post.url }}" class="list-group-item list-group-item-action py-3 lh-tight">
+        <div class="d-flex w-100 align-items-center justify-content-between">
+          <strong class="mb-1">{{ post.title }} </strong>
+        </div>
+        <div class="col-10 mb-1 small">{{ post.excerpt }}发表于：{{ post.date | date: "%Y-%m-%d %H:%M:%S" }}</div>
+      </a>
+</div>
 {% endfor %}
-
 <!-- 分頁 -->
 <div class="pagination">
 	<ul class="paginator">
