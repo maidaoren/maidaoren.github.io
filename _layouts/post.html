@@ -23,6 +23,7 @@ layout: default
     .post-header h3 {
       font-size: 3rem;
       font-weight: bold;
+      color: FFFFFF;
     }
     .post-meta {
       font-style: italic;
@@ -68,30 +69,18 @@ layout: default
       <aside class="col-md-4 sidebar">
         <div class="card">
           <div class="card-header bg-primary text-white">
-            關於作者
+           最新文章
           </div>
           <div class="card-body">
-            <p>{{ site.author.name }} 賣刀人是一位從中共瘋人院放出來的技術人員。</p>
-          </div>
-        </div>
-
-        <div class="card">
-          <div class="card-header bg-secondary text-white">
-            最近文章
-          </div>
-          <div class="card-body">
-            <ul class="list-unstyled">
-              {% for post in site.posts limit:5 %}
+               {% for post in site.posts limit:5 %}
                 <li>
                   <a href="{{ post.url }}" class="text-decoration-none">
                     <i class="bi bi-chevron-right"></i> {{ post.title }}
                   </a>
                 </li>
               {% endfor %}
-            </ul>
           </div>
         </div>
-
       </aside>
     </div>
   </div>  
