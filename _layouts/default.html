@@ -18,9 +18,9 @@
     <section>
       {{ content }}
     </section>
-    <footer>
-      &copy; 賣刀人
-    </footer>
-
+  <!-- 頁腳 -->
+  <footer class="text-center">
+    <p>&copy; {{ "now" | date: "%Y" }} {{ site.title }}</p>
+  </footer>
   </body>
 </html>
