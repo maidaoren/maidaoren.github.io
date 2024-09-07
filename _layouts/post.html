@@ -42,7 +42,22 @@
     footer {
       background-color: #333;
       color: white;
-      padding: 0.1px 0;
+      padding: 3px 2;
+    }
+
+        .sidebar {
+      position: fixed;
+      top: 2;
+      right: 0;
+      width: 250px;
+      height: 100%;
+/*      overflow-y: auto;*/
+/*      background-color: #f8f9fa;*/
+/*      border-left: 1px solid #dee2e6;*/
+    }
+    .content {
+      margin-right: 250px; /* 确保内容不会被侧边栏遮挡 */
+      padding: 20px;
     }
   </style>
 </head>
@@ -99,7 +114,7 @@
       下一篇: <a href="{{ page.next.url }}" class="btn btn-dark" role="button">{{ page.next.title }}</a>
       {% endif %}
   </p>
-  
+
   <footer class="text-center">
     <p>&copy; {{ "now" | date: "%Y" }} {{ site.title }}</p>
   </footer>
