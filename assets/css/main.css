@@ -1,0 +1,12 @@
+/* 放大代码块字体 */
+.highlight pre, .highlight code {
+  font-size: 1.2em; /* 调整字体大小 */
+  line-height: 1.5; /* 增加行高，便于阅读 */
+}
+
+/* 你也可以针对不同的屏幕尺寸进行调整 */
+@media (max-width: 768px) {
+  .highlight pre, .highlight code {
+    font-size: 1.2em; /* 移动设备上稍微小一点的字体 */
+  }
+}
