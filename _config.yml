@@ -35,6 +35,7 @@ plugins:
   - jekyll-feed
   - jekyll-paginate
 
+
 # homepage: "home"
 paginate: 5
 paginate_path: "/page:num/"
