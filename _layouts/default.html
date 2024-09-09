@@ -30,5 +30,21 @@
   <footer class="text-center">
     <p>&copy; {{ "now" | date: "%Y" }} {{ site.title }}</p>
   </footer>
+  <script src="/assets/js/clipboard.js/2.0.6/clipboard.min.js"></script>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    var clipboard = new ClipboardJS('.copy-btn');
+
+    clipboard.on('success', function(e) {
+      alert('代码已成功复制到剪贴板！');
+      e.clearSelection();
+    });
+
+    clipboard.on('error', function(e) {
+      alert('复制失败，请手动复制');
+    });
+  });
+</script>
   </body>
 </html>
