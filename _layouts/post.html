@@ -1,15 +1,23 @@
 <!DOCTYPE html>
+<<<<<<< HEAD
 <html lang="zh-TW">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>{{ page.title }}</title>
    <link rel="stylesheet" href="{{ '/assets/css/bootstrap.min.css' | relative_url }}">
+=======
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>{{ page.title }}</title>
+>>>>>>> 6c6991fb3262737fa37767d48ec60fa8f9d71896
   <meta name="description" content="賣刀人的博客，政治，軍事，文化，技術.">  
   <meta name="apple-mobile-web-app-title" content="賣刀人的博客">
   <meta name="keywords" content="賣刀人的博客，政治，軍事，文化，技術">
   <link rel="stylesheet" href="{{ '/assets/css/a.css' | relative_url }}">
   <link rel="stylesheet" href="{{ '/assets/css/bootstrap.css' | relative_url }}">
+<<<<<<< HEAD
   <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
   <script src="{{ '/assets/js/bootstrap.js' | relative_url }}"></script> 
   <style>
@@ -46,12 +54,19 @@
       padding: 3px 2;
     }
 
+=======
+<script src="{{ '/assets/js/bootstrap.js' | relative_url }}"></script>    
+  <script src="{{ '/assets/js/bootstrap.bundle.min.js' | relative_url }}"></script>
+  <link rel="stylesheet" href="{{ '/assets/css/bootstrap.min.css' | relative_url }}">
+  <style>
+>>>>>>> 6c6991fb3262737fa37767d48ec60fa8f9d71896
     .sidebar {
       position: fixed;
       top: 0;
       right: 0;
       width: 250px;
       height: 100%;
+<<<<<<< HEAD
 /*      overflow-y: auto;
       background-color: #f8f9fa;
       border-left: 1px solid #dee2e6;*/
@@ -101,6 +116,39 @@
       <h1>{{ page.title }}</h1>
       <p class="meta">{{ page.date | date: "%Y-%m-%d %H:%M:%S" }}</p>
     </div>
+=======
+      overflow-y: auto;
+      background-color: #f8f9fa;
+      border-left: 1px solid #dee2e6;
+    }
+    .content {
+      padding: 20px;
+    }
+     footer {
+      background-color: #333;
+      color: white;
+      padding: 0.1px 0;
+    }
+  </style>
+</head>
+<body>
+    <nav>
+      <a href="/" class="btn btn-dark">賣刀人的博客</a>
+      <a href="/about" class="btn btn-dark">關於賣刀人</a>
+    </nav>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-9 content">
+        <article class="post">
+  {%- if page.image -%}
+    <div class="featuredImage">
+        <img src="{{ '/assets/img/' | append: page.image | relative_url }}" alt="" />
+      </div>
+  {%- endif -%}
+  <header>
+    <h1><a href="#" class="btn btn-dark">{{ page.title }}</a></h1>
+    <p class="meta">{{ page.date | date: "%Y-%m-%d %H:%M:%S" }}</p>
+>>>>>>> 6c6991fb3262737fa37767d48ec60fa8f9d71896
   </header>
   <!-- 內容區域 -->
   <div class="container my-5">
@@ -111,6 +159,7 @@
         <article>
           <p>{{ content }}</p>
 
+<<<<<<< HEAD
         </article>
       </main>
 
@@ -135,11 +184,17 @@
   </div>  
 <p class="container mt-3">
    {% if page.previous.url %}
+=======
+  <!-- POST NAVIGATION -->
+  <div class="container mt-2">
+    {% if page.previous.url %}
+>>>>>>> 6c6991fb3262737fa37767d48ec60fa8f9d71896
       上一篇: <a href="{{ page.previous.url }}" class="btn btn-dark" role="button">{{ page.previous.title }}</a>
       {% endif %}
       {% if page.next.url %}
       下一篇: <a href="{{ page.next.url }}" class="btn btn-dark" role="button">{{ page.next.title }}</a>
       {% endif %}
+<<<<<<< HEAD
   </p>
 
   <footer class="text-center">
@@ -150,3 +205,15 @@
 </body>
 <br>
 </html>
+=======
+  </div>
+</article>
+     
+    </div>
+  </div>  
+  <footer class="text-center">
+    <p>&copy; {{ "now" | date: "%Y" }} {{ site.title }}</p>
+  </footer>
+</body>
+</html>
+>>>>>>> 6c6991fb3262737fa37767d48ec60fa8f9d71896

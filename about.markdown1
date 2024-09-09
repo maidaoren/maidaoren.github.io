@@ -1,7 +1,5 @@
 ---
-layout: page
-title: 關於賣刀人
-permalink: /about/
+layout: default
 ---
 賣刀人姓朱名宏君，名字是同村人幫取的，父親只讀過四年級，祖父沒念過書。
 
