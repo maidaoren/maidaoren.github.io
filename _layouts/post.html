@@ -60,6 +60,32 @@
       margin-right: 250px; /* 确保内容不会被侧边栏遮挡 */
       padding: 20px;
     }
+    .highlight {
+  position: relative;
+  padding-right: 60px; /* 给按钮留出空间 */
+}
+
+.copy-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  padding: 5px 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 0.9em;
+  border-radius: 5px;
+}
+
+.copy-btn:hover {
+  background-color: #0056b3;
+}
+
+/* 确保行号不被选中 */
+.line-numbers {
+  user-select: none; /* 禁止用户选择行号 */
+}
   </style>
 </head>
 <body>
