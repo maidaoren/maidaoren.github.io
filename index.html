@@ -16,9 +16,7 @@ layout: default
 <div class="pagination">
 	<ul class="paginator">
   {% if paginator.previous_page %}
-    <a href="{{ paginator.previous_page_path }}" class="btn btn-dark">
-      上一頁
-    </a>
+    <a href="{{ paginator.previous_page_path }}" class="btn btn-dark">上一頁</a>
   {% else %}
     <span class="previous">首頁</span>
   {% endif %}

@@ -108,23 +108,22 @@
 
       <!-- 文章內容 -->
         <article>
-          <p>{{ content }}</p>
-
+          {{ content }}
         </article>
       </main>
     </div>
   </div>  
-<p class="container mt-3">
+<div class="container mt-3">
    {% if page.previous.url %}
       上一篇: <a href="{{ page.previous.url }}" class="btn btn-dark" role="button">{{ page.previous.title }}</a>
       {% endif %}
       {% if page.next.url %}
       下一篇: <a href="{{ page.next.url }}" class="btn btn-dark" role="button">{{ page.next.title }}</a>
       {% endif %}
-  </p>
+  </div>
 
   <footer class="text-center">
-    <p>&copy; {{ "now" | date: "%Y" }} {{ site.title }}</p>
+    <div>&copy; {{ "now" | date: "%Y" }} {{ site.title }}</div>
   </footer>
   <!-- Bootstrap JS & Popper.js -->
   <script src="{{ '/assets/js/bootstrap.bundle.min.js' | relative_url }}"></script>
