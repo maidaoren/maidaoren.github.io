@@ -7,48 +7,35 @@
 #
 # For technical reasons, this file is *NOT* reloaded automatically when you use
 # 'bundle exec jekyll serve'. If you change this file, please restart the server process.
-#
-# If you need help with YAML syntax, here are some quick references for you:
-# https://learn-the-web.algonquindesign.ca/topics/markdown-yaml-cheat-sheet/#yaml
-# https://learnxinyminutes.com/docs/yaml/
-#
-# Site settings
-# These are used to personalize your new site. If you look in the HTML files,
-# you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
-# You can create any custom variable you would like, and they will be accessible
-# in the templates via {{ site.myvariable }}.
 
+# Site settings
 title: 卖刀人的博客
-description: >- # this means to ignore newlines until "baseurl:"
+description: >-
   专注于威权体制，专制社会分析与解构
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
+baseurl: "" 
+url: "" 
 twitter_username: O0o362
-github_username:  maidaoren
+github_username: maidaoren
 
 # Build settings
 theme: minima
 plugins:
   - jekyll-feed
 
-kramdown:
-  math_engine: mathjax
-  
+# ====== Markdown 与数学公式核心配置（已合并去重） ======
 markdown: kramdown
-mathjax: true
+kramdown:
+  input: GFM
+  math_engine: null   # 让 Jekyll 后端对公式完全放手，由前端 MathJax 渲染，彻底解决下划线被吞的问题
+  
+mathjax: true        # 用于激活 head.html 中的判断开关
+# ===================================================
 
 include:
   - _includes
   - _layouts
 
 # Exclude from processing.
-# The following items will not be processed, by default.
-# Any item listed under the `exclude:` key here will be automatically added to
-# the internal "default list".
-#
-# Excluded items can be processed by explicitly listing the directories or
-# their entries' file path in the `include:` list.
-#
 # exclude:
 #   - .sass-cache/
 #   - .jekyll-cache/
