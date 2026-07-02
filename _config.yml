@@ -19,8 +19,8 @@ github_username: maidaoren
 
 # Build settings
 theme: minima
-plugins:
-  - jekyll-feed
+#plugins:
+ # - jekyll-feed
 
 # ====== Markdown 与数学公式核心配置（已合并去重） ======
 markdown: kramdown
@@ -34,6 +34,8 @@ mathjax: true        # 用于激活 head.html 中的判断开关
 include:
   - _includes
   - _layouts
+
+
 
 # Exclude from processing.
 # exclude:
