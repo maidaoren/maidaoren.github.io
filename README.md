@@ -1,5 +1,5 @@
 
-[数字利维坦的非线性演化：基于四机制耦合、三状态切换与脆弱性预警的治理模型整合分析](https://github.com/maidaoren/maidaoren.github.io/blob/main/%E6%95%B0%E5%AD%97%E5%88%A9%E7%BB%B4%E5%9D%A6%E7%9A%84%E9%9D%9E%E7%BA%BF%E6%80%A7%E6%BC%94%E5%8C%96%EF%BC%9A%E5%9F%BA%E4%BA%8E%E5%9B%9B%E6%9C%BA%E5%88%B6%E8%80%A6%E5%90%88%E3%80%81%E4%B8%89%E7%8A%B6%E6%80%81%E5%88%87%E6%8D%A2%E4%B8%8E%E8%84%86%E5%BC%B1%E6%80%A7%E9%A2%84%E8%AD%A6%E7%9A%84%E6%B2%BB%E7%90%86%E6%A8%A1%E5%9E%8B%E6%95%B4%E5%90%88%E5%88%86%E6%9E%90.md)
+[数字利维坦的非线性演化：基于四机制耦合、三状态切换与脆弱性预警的治理模型整合分析](https://maidaoren.github.io/2026/07/02/The-capriciousness-of-modern-authoritarian-states.html)
 
 # 作者：朱宏君 网名卖刀人 网络工程师 程序员 渗透师
 
