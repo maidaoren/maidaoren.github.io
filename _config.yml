@@ -35,7 +35,18 @@ include:
   - _includes
   - _layouts
 
+# 网站核心配置
+title: "卖刀人的博客"
+description: "专注于威权体制，专制社会分析与解构" # 👈 这里写一句话简介，替换掉现在推特里重复的第二行字
+url: "https://maidaoren.github.io"          # 👈 必须填写你在线上的完整网址
 
+# Twitter 分享卡片配置
+twitter:
+  username: "Oo0362"       # 👈 你的推特用户名（不要带 @）
+  card: summary            # 👈 summary 代表左侧小图、右侧文字的紧凑卡片（和 image_eb31b1.png 布局一致）
+
+# 默认分享图设置
+image: "/assets/img/b.jpg" # 👈 直接指定你在 assets/img 目录下的 b.jpg 作为你的推特分享标识图！
 
 # Exclude from processing.
 # exclude:
