@@ -156,6 +156,8 @@ D(t)=Dmax⋅(1−α⋅γselfish(t))⋅(1−e−λ/FM2(t))
 
 D(t) = D_{max} \cdot (1 - \alpha \cdot \gamma_{selfish}(t)) \cdot \left(1 - e^{-\lambda / F_{M2}(t)}\right)
 
+$$D(t) = D_{max} \cdot (1 - \alpha \cdot \gamma_{selfish}(t)) \cdot \left(1 - e^{-\lambda / F_{M2}(t)}\right)$$
+
 D(t)=Dmax​⋅(1−α⋅γselfish​(t))⋅(1−e−λ/FM2​(t))
 
 其中γ_selfish(t)为基层自利系数，反映创收指标强度和自由裁量权范围对执行方向的扭曲程度，随地方财政压力上升而上升；α为自利扭曲的损耗系数，反映体制内部问责机制对基层自利行为的约束能力。这一乘数项与原饱和函数独立作用：即便F_{M2}(t)处于中等水平、饱和效应尚不显著时，若γ_selfish(t)已处于高位，D(t)的实际水平仍可能显著低于饱和函数单独预测的水平——自利扭曲和饱和效应是D(t)名义与实际落差的两个相互独立但可能同时作用的来源。
