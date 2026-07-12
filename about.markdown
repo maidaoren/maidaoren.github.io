@@ -4,9 +4,9 @@ title: 关于卖刀人
 permalink: /about/
 ---
 
-一个纯粹的人
+血债血来偿！
 
-[《从威权国家向极权国家的非线性演化》](https://github.com/maidaoren/maidaoren.github.io/blob/main/_posts/2026-07-02-The-capriciousness-of-modern-authoritarian-states.md) 可将该文全文拷贝放到ai中，或电脑端右键打印，另存为PDF，上传给ai，让ai生成有洞见内容，组织材料，提出新问题。经济基础决定上层建筑，吃草政权又稳定三年是错误的。而是基于合法性叙事与强力控制及原子化。
+[《从威权国家向极权国家的非线性演化》](https://github.com/maidaoren/maidaoren.github.io/blob/main/_posts/2026-07-02-The-capriciousness-of-modern-authoritarian-states.md) 可将该文全文拷贝放到ai中，或电脑端右键打印，另存为PDF，上传给ai，让ai生成有洞见内容，组织材料，提出新问题。经济基础决定上层建筑，吃草政权又稳定三年是错误的。而是基于合法性叙事与强力控制原子化以及生存资源的依附。
 
 三機制：M1（合法性與敘事生產，包括績效、歷史、安全及意識形態社會化四組件）、M2（合規行為生態，以組織原子化為核心、選擇性強制為強化）、M3（資源與激勵分配，透過編制、城市資源捆綁及政審代際聯動提升退出成本）。
 
