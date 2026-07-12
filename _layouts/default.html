@@ -15,17 +15,15 @@
 
     {%- include footer.html -%}
 
-    <!-- 1. 新增：基于 Bootstrap 5 的回到顶部悬浮箭头按钮 -->
     <button 
       type="button" 
-      class="btn btn-dark rounded-circle shadow position-fixed bottom-0 end-0 m-4 d-none" 
+      class="btn-back-to-top position-fixed bottom-0 end-0 d-none" 
       id="btn-back-to-top" 
-      style="z-index: 1050; width: 45px; height: 45px; border: none;"
+      style="z-index: 1050; width: 45px; height: 45px; border: none; background-color: #0084FF; color: white; border-radius: 5px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); cursor: pointer;"
       aria-label="回到顶部">
-      <span style="font-size: 20px; line-height: 1; display: block; transform: translateY(-2px); color: #fff;">↑</span>
+      <span style="font-size: 20px; line-height: 1; display: block; transform: translateY(-2px);">↑</span>
     </button>
 
-    <!-- 2. 新增：控制按钮显示/隐藏以及平滑滚动的轻量脚本 -->
     <script>
       document.addEventListener("DOMContentLoaded", function () {
         const backToTopButton = document.getElementById("btn-back-to-top");
