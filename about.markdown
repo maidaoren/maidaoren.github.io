@@ -6,6 +6,8 @@ permalink: /about/
 
 一个纯粹的人
 
+[《从威权国家向极权国家的非线性演化》](https://github.com/maidaoren/maidaoren.github.io/blob/main/_posts/2026-07-02-The-capriciousness-of-modern-authoritarian-states.md) 可将该文全文拷贝放到ai中，让ai生成有洞见内容，组织材料，提出新问题。
+
 三機制：M1（合法性與敘事生產，包括績效、歷史、安全及意識形態社會化四組件）、M2（合規行為生態，以組織原子化為核心、選擇性強制為強化）、M3（資源與激勵分配，透過編制、城市資源捆綁及政審代際聯動提升退出成本）。
 
 三狀態：S1（威權常態治理）、S2（強化治理，進一步區分被動回應的S2-D與主動攻勢的S2-O）、S3（政權存續危機）。
