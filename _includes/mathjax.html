@@ -1,12 +1,28 @@
 <script>
   window.MathJax = {
-    tex: {
-      inlineMath: [['$', '$'], ['\\(', '\\)']],
-      displayMath: [['$$', '$$'], ['\\[', '\\]']],
-      processEscapes: true
-    }
+    tex: { inlineMath: [['$', '$']], displayMath: [['$$', '$$']] }
   };
 </script>
-<script type="text/javascript" id="MathJax-script" async
-  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+
+<script>
+  // 监听双击事件，谁双击公式就直接把公式源码弹出来供复制
+  document.addEventListener('dblclick', function(e) {
+    const container = e.target.closest('mjx-container');
+    if (container) {
+      // 拿到隐藏在里面的原始 TeX 字符串
+      const scriptNode = container.previousSibling || container.parentNode.querySelector('script[type^="math/tex"]');
+      const texCode = container.getAttribute('annotation') || (scriptNode ? scriptNode.textContent : '');
+      
+      if (texCode || container.innerText) {
+        // 如果实在找不到属性，就提取纯文本，或者直接弹出提示
+        const finalTex = texCode ? texCode : container.innerText;
+        navigator.clipboard.writeText(finalTex).then(() => {
+          alert('公式源码已成功复制到剪贴板！\n' + finalTex);
+        }).catch(() => {
+          prompt('请复制下框中的公式源码：', finalTex);
+        });
+      }
+    }
+  });
 </script>
+<style> mjx-container { cursor: pointer; } </style>

@@ -17,7 +17,7 @@
 
     <button 
       type="button" 
-      class="btn-back-to-top position-fixed bottom-0 end-0 d-none" 
+      class="btn-back-to-top position-fixed bottom-0 end-0 m-4 d-none" 
       id="btn-back-to-top" 
       style="z-index: 1050; width: 45px; height: 45px; border: none; background-color: #0084FF; color: white; border-radius: 5px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); cursor: pointer;"
       aria-label="回到顶部">
@@ -28,7 +28,7 @@
       document.addEventListener("DOMContentLoaded", function () {
         const backToTopButton = document.getElementById("btn-back-to-top");
 
-        // 监听滚动事件：向下滚动超过 300px 显示按钮，否则隐藏
+        // 滚动超过 300px 显示按钮
         window.addEventListener("scroll", function () {
           if (window.scrollY > 300) {
             backToTopButton.classList.remove("d-none");
@@ -37,7 +37,7 @@
           }
         });
 
-        // 监听点击事件：点击按钮平滑回滚到顶部
+        // 点击平滑滚动回顶部
         backToTopButton.addEventListener("click", function () {
           window.scrollTo({
             top: 0,
@@ -46,6 +46,8 @@
         });
       });
     </script>
+
+    <script src="{{ '/assets/js/custom-formula.js' | relative_url }}"></script>
 
   </body>
 

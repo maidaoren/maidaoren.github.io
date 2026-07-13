@@ -1,0 +1,76 @@
+/* 自定义公式外层盒子 */
+.custom-formula-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 1.5rem 0;
+  padding: 1.2rem;
+  background-color: #f8f9fa; 
+  border: 1px solid #e9ecef;
+  border-radius: 6px;
+  position: relative;
+  
+  /* 🛠️ 核心：允许这个盒子被鼠标正常框选 */
+  user-select: text !important;
+  -webkit-user-select: text !important;
+  -moz-user-select: text !important;
+}
+
+/* 悬浮知乎蓝效果 */
+.custom-formula-container:hover {
+  background-color: #f0f7ff;
+  border-color: #80c2ff;
+}
+
+/* 公式文本字体样式 */
+.custom-formula-text {
+  font-family: "Times New Roman", Times, serif;
+  font-size: 1.25rem;
+  font-style: italic;
+  color: #1a1a1a;
+  text-align: center;
+  
+  /* 🛠️ 核心：当全选时，让前端排版的 HTML 视觉样式“不可被复制”，防止复制出碎字符 */
+  user-select: none !important;
+  -webkit-user-select: none !important;
+  -moz-user-select: none !important;
+}
+
+/* 让公式里的数字、括号和标准普通文本不倾斜 */
+.custom-formula-text span, 
+.custom-formula-text sub, 
+.custom-formula-text sup {
+  font-style: normal;
+}
+
+.custom-formula-text sub { font-size: 0.75rem; bottom: -0.2rem; }
+.custom-formula-text sup { font-size: 0.85rem; top: -0.5rem; }
+
+/* 🛠️ 终极武器：专门准备给剪贴板抓取的隐藏文本 */
+.custom-formula-source {
+  position: absolute;
+  position: absolute !important;
+  clip: rect(1px, 1px, 1px, 1px); /* 视觉上完全隐藏，绝不影响排版 */
+  padding: 0 !important;
+  border: 0 !important;
+  height: 1px !important;
+  width: 1px !important;
+  overflow: hidden;
+  
+  /* 🛠️ 核心：视觉上看不见，但允许被系统全选和复制 */
+  user-select: text !important;
+  -webkit-user-select: text !important;
+  -moz-user-select: text !important;
+}
+
+/* 提示小字：全选时不需要它，彻底隐藏且不让它被复制 */
+.custom-formula-hint {
+  font-size: 0.75rem;
+  color: #999;
+  margin-top: 0.6rem;
+  font-weight: 500;
+  user-select: none !important;
+  -webkit-user-select: none !important;
+  -moz-user-select: none !important;
+}

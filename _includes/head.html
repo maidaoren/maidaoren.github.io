@@ -3,20 +3,60 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   {%- seo -%}
+  
   <link rel="stylesheet" href="{{ "/assets/main.css" | relative_url }}">
-<link rel="stylesheet" href="{{ "/assets/css/bootstrap.min.css" | relative_url }}">
+  <link rel="stylesheet" href="{{ "/assets/css/bootstrap.min.css" | relative_url }}">
 
-{%- feed_meta -%}
+  {%- feed_meta -%}
 
   {%- if jekyll.environment == 'production' and site.google_analytics -%}
     {%- include google-analytics.html -%}
   {%- endif -%}
+  
+  <link rel="icon" type="image/jpeg" href="{{ "/assets/img/b.jpg" | relative_url }}">
+  <link rel="apple-touch-icon" href="{{ "/assets/img/b.jpg" | relative_url }}">
+  <link rel="stylesheet" href="{{ "/assets/css/custom-formula.css" | relative_url }}">
 
-  <!--  自定义部分：判断配置文件中是否启用了 MathJax -->
-  {%- if site.mathjax -%}
-    {%- include mathjax.html -%}
-  {%- endif -%}
-  <!-- 引入标签页图标 -->
-<link rel="icon" type="image/jpeg" href="{{ "/assets/img/b.jpg" | relative_url }}">
-<link rel="apple-touch-icon" href="{{ "/assets/img/b.jpg" | relative_url }}">
+  <style>
+    /* 自动生成的原生公式容器 */
+    .native-formula-box {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      margin: 1.5rem 0;
+      padding: 1.2rem;
+      background-color: #f8f9fa;
+      border: 1px solid #e9ecef;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: all 0.2s ease-in-out;
+      position: relative;
+    }
+
+    /* 悬浮时的知乎蓝动态效果 */
+    .native-formula-box:hover {
+      background-color: #f0f7ff;
+      border-color: #80c2ff;
+      box-shadow: 0 4px 12px rgba(0, 132, 255, 0.06);
+    }
+
+    /* 公式源码的文本样式 */
+    .native-formula-code {
+      font-family: "Fira Code", Consolas, Monaco, monospace;
+      font-size: 1.05rem;
+      color: #1a1a1a;
+      text-align: center;
+      word-break: break-all;
+      user-select: all; /* 允许读者直接双击全选 */
+    }
+
+    /* 知乎蓝一键复制提示标签 */
+    .native-formula-hint {
+      font-size: 0.75rem;
+      color: #0084FF;
+      margin-top: 0.6rem;
+      font-weight: 500;
+    }
+  </style>
 </head>
