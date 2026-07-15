@@ -37,6 +37,13 @@
       text-decoration: underline !important; /* 悬浮下划线 */
     }
 
+    /* 💡 特殊优化：让顶部导航和主标题在悬浮时不出现下划线，保持干净 */
+    .site-title:hover,
+    .site-nav .page-link:hover {
+      text-decoration: none !important; 
+      color: #0084FF !important; /* 仅变蓝，不下划线 */
+    }
+
     /* ======================================================= */
     /* 2. 头部导航栏对齐逻辑（Flexbox 弹性单行布局） */
     /* ======================================================= */
@@ -56,6 +63,7 @@
       padding: 0 !important;
       display: inline-block !important;
       white-space: nowrap !important;
+      color: #2d2d2d !important; /* 默认继承你的护眼深灰字色 */
     }
 
     .site-nav {
@@ -63,7 +71,7 @@
       margin: 0 !important;
       padding: 0 !important;
       display: flex !important;
-      align-items: center !important;
+      align-items: center;
     }
 
     /* 彻底干掉移动端隐藏触发器占用的空间，防止把导航链接顶下去 */
@@ -91,6 +99,7 @@
       line-height: 64px !important; /* 与标题高度对齐 */
       margin: 0 !important;
       padding: 0 !important;
+      color: #555 !important; /* 默认导航字色稍微淡一点，突出层次感 */
     }
   </style>
 </head>
