@@ -4,10 +4,11 @@ layout: default
 
 <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
 
-  <header class="post-header">
-    
-    <hr>
-    <h1 class="post-title p-name" itemprop="name headline">{{ page.title | escape }}</h1>
+  <hr>
+<header class="post-header" style="margin-bottom: 0 !important;">
+  <h1 class="post-title p-name" itemprop="name headline" style="font-family: 'Times New Roman', 'Noto Serif SC', serif; font-weight: 400;">
+    {{ page.title | escape }}
+  </h1>
         <div class="post-meta">
       {%- assign date_format = site.minima.date_format | default: "%Y-%m-%d" -%}
       {% assign pdate = page.date | date_to_xmlschema %}
@@ -35,9 +36,7 @@ layout: default
     </div>
   </header>
    <div class="reading-container">
-  
-  <hr class="chapter-divider">
-    {{ content }}
+      {{ content }}
   </div>
 
   {% if jekyll.environment == 'production' -%}

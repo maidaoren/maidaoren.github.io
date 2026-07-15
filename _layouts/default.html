@@ -1,21 +1,12 @@
 <!DOCTYPE html>
 <html lang="{{ page.lang | default: site.lang | default: "en" }}">
-
   {%- include head.html -%}
-
   <body>
-
     {%- include header.html -%}
-
-    <div class="reading-container">
-  
-  <hr class="chapter-divider">
-
+    <div class="reading-container">  
         {{ content }}
-
 </div>
     {%- include footer.html -%}
-
     <button 
       type="button" 
       class="btn-back-to-top position-fixed bottom-0 end-0 m-4 d-none" 
