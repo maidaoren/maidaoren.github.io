@@ -188,3 +188,11 @@ body {
     max-width: 900px;
   }
 }
+
+.feed-description {
+  font-size: 1rem !important;
+  font-weight: 400 !important;
+  line-height: 1.5 !important;
+  color: #212529 !important;
+  font-family: inherit !important;
+}

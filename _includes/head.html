@@ -18,61 +18,79 @@
   <link rel="stylesheet" href="{{ "/assets/css/custom-formula.css" | relative_url }}">
 
   <style>
+    /* ======================================================= */
+    /* 1. 全局链接交互：默认无下划线，悬浮时变知乎蓝+出现下划线 */
+    /* ======================================================= */
+    a,
+    .site-footer a,
+    .social-media-list a,
+    .social-links a {
+      text-decoration: none !important;
+      transition: color 0.2s ease; /* 丝滑变色过渡 */
+    }
 
+    a:hover,
+    .site-footer a:hover,
+    .social-media-list a:hover,
+    .social-links a:hover {
+      color: #0084FF !important;            /* 知乎蓝 */
+      text-decoration: underline !important; /* 悬浮下划线 */
+    }
 
-.site-header .wrapper {
-  display: flex !important;
-  justify-content: space-between !important;
-  align-items: center !important;
-  height: 64px !important;
-  padding: 0 20px !important;
-  box-sizing: border-box !important;
-}
+    /* ======================================================= */
+    /* 2. 头部导航栏对齐逻辑（Flexbox 弹性单行布局） */
+    /* ======================================================= */
+    .site-header .wrapper {
+      display: flex !important;
+      justify-content: space-between !important;
+      align-items: center !important;
+      height: 64px !important;
+      padding: 0 20px !important;
+      box-sizing: border-box !important;
+    }
 
-.site-title {
-  float: none !important;
-  line-height: 64px !important;
-  margin: 0 !important;
-  padding: 0 !important;
-  display: inline-block !important;
-  white-space: nowrap !important;
-}
+    .site-title {
+      float: none !important;
+      line-height: 64px !important;
+      margin: 0 !important;
+      padding: 0 !important;
+      display: inline-block !important;
+      white-space: nowrap !important;
+    }
 
-/* 3. 核心修复：重置 nav 元素，让它直接成为 Flex 子项 */
-.site-nav {
-  float: none !important;
-  margin: 0 !important;
-  padding: 0 !important;
-  display: flex !important;
-  align-items: center !important;
-}
+    .site-nav {
+      float: none !important;
+      margin: 0 !important;
+      padding: 0 !important;
+      display: flex !important;
+      align-items: center !important;
+    }
 
-/* 4. 彻底干掉移动端隐藏触发器占用的空间 */
-.nav-trigger,
-.site-nav label[for="nav-trigger"] {
-  display: none !important;  /* 强行消失，绝不占位 */
-  width: 0 !important;
-  height: 0 !important;
-  margin: 0 !important;
-  padding: 0 !important;
-}
+    /* 彻底干掉移动端隐藏触发器占用的空间，防止把导航链接顶下去 */
+    .nav-trigger,
+    .site-nav label[for="nav-trigger"] {
+      display: none !important;
+      width: 0 !important;
+      height: 0 !important;
+      margin: 0 !important;
+      padding: 0 !important;
+    }
 
-/* 5. 强行把包裹链接的 .trigger 设为 Flex 行内布局 */
-.site-nav .trigger {
-  display: flex !important;
-  flex-direction: row !important; /* 强制水平排列 */
-  align-items: center !important;
-  gap: 20px !important;           /* 链接之间的间距 */
-  margin: 0 !important;
-  padding: 0 !important;
-}
+    /* 强行把包裹链接的 .trigger 设为 Flex 行内水平布局 */
+    .site-nav .trigger {
+      display: flex !important;
+      flex-direction: row !important;
+      align-items: center !important;
+      gap: 20px !important; /* 链接之间的间距 */
+      margin: 0 !important;
+      padding: 0 !important;
+    }
 
-/* 6. 统一链接的行高，与标题完美对齐 */
-.site-nav .page-link {
-  display: inline-block !important;
-  line-height: 64px !important;   /* 行高与外层 64px 保持一致 */
-  margin: 0 !important;
-  padding: 0 !important;
-}
+    .site-nav .page-link {
+      display: inline-block !important;
+      line-height: 64px !important; /* 与标题高度对齐 */
+      margin: 0 !important;
+      padding: 0 !important;
+    }
   </style>
 </head>
