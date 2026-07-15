@@ -18,45 +18,61 @@
   <link rel="stylesheet" href="{{ "/assets/css/custom-formula.css" | relative_url }}">
 
   <style>
-    /* 自动生成的原生公式容器 */
-    .native-formula-box {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      margin: 1.5rem 0;
-      padding: 1.2rem;
-      background-color: #f8f9fa;
-      border: 1px solid #e9ecef;
-      border-radius: 6px;
-      cursor: pointer;
-      transition: all 0.2s ease-in-out;
-      position: relative;
-    }
 
-    /* 悬浮时的知乎蓝动态效果 */
-    .native-formula-box:hover {
-      background-color: #f0f7ff;
-      border-color: #80c2ff;
-      box-shadow: 0 4px 12px rgba(0, 132, 255, 0.06);
-    }
 
-    /* 公式源码的文本样式 */
-    .native-formula-code {
-      font-family: "Fira Code", Consolas, Monaco, monospace;
-      font-size: 1.05rem;
-      color: #1a1a1a;
-      text-align: center;
-      word-break: break-all;
-      user-select: all; /* 允许读者直接双击全选 */
-    }
+.site-header .wrapper {
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+  height: 64px !important;
+  padding: 0 20px !important;
+  box-sizing: border-box !important;
+}
 
-    /* 知乎蓝一键复制提示标签 */
-    .native-formula-hint {
-      font-size: 0.75rem;
-      color: #0084FF;
-      margin-top: 0.6rem;
-      font-weight: 500;
-    }
+.site-title {
+  float: none !important;
+  line-height: 64px !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  display: inline-block !important;
+  white-space: nowrap !important;
+}
+
+/* 3. 核心修复：重置 nav 元素，让它直接成为 Flex 子项 */
+.site-nav {
+  float: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  display: flex !important;
+  align-items: center !important;
+}
+
+/* 4. 彻底干掉移动端隐藏触发器占用的空间 */
+.nav-trigger,
+.site-nav label[for="nav-trigger"] {
+  display: none !important;  /* 强行消失，绝不占位 */
+  width: 0 !important;
+  height: 0 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+/* 5. 强行把包裹链接的 .trigger 设为 Flex 行内布局 */
+.site-nav .trigger {
+  display: flex !important;
+  flex-direction: row !important; /* 强制水平排列 */
+  align-items: center !important;
+  gap: 20px !important;           /* 链接之间的间距 */
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+/* 6. 统一链接的行高，与标题完美对齐 */
+.site-nav .page-link {
+  display: inline-block !important;
+  line-height: 64px !important;   /* 行高与外层 64px 保持一致 */
+  margin: 0 !important;
+  padding: 0 !important;
+}
   </style>
 </head>
