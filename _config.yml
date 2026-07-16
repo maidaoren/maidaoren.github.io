@@ -11,7 +11,7 @@
 # Site settings
 title: 卖刀人的博客
 description: >-
-  专注于威权体制，专制社会分析与解构
+  看，有人在花丛中笑
 baseurl: "" 
 url: "" 
 twitter_username: O0o362
@@ -37,7 +37,7 @@ include:
 
 # 网站核心配置
 title: "卖刀人的博客"
-description: "专注于威权体制，专制社会分析与解构" # 👈 这里写一句话简介，替换掉现在推特里重复的第二行字
+description: "看，有人在花丛中笑" # 👈 这里写一句话简介，替换掉现在推特里重复的第二行字
 url: "https://maidaoren.github.io"          # 👈 必须填写你在线上的完整网址
 
 
