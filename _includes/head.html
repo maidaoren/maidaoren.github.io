@@ -17,7 +17,7 @@
   <link rel="apple-touch-icon" href="{{ "/assets/img/b.jpg" | relative_url }}">
   <link rel="stylesheet" href="{{ "/assets/css/custom-formula.css" | relative_url }}">
 
-<style>
+  <style>
     /* ======================================================= */
     /* 1. 全局链接交互：默认无下划线，悬浮时变知乎蓝+出现下划线 */
     /* ======================================================= */
@@ -158,16 +158,42 @@
       margin-right: 0 !important;
       padding-left: 1.25rem !important; /* 内部留适当内边距即可，外部靠左对齐 */
     }
+
+    /* ======================================================= */
+    /* 🔒 4. 划词复制优化：阻断 MathJax 渲染实体，指向隐形源码 */
+    /* ======================================================= */
+    mjx-container, 
+    .MathJax, 
+    [data-mml-node],
+    .mjx-container * {
+      user-select: none !important;
+      -webkit-user-select: none !important;
+    }
+
+    /* 隐形源码层：用户不可见，但完美响应鼠标选中并支持跨浏览器拷贝 */
+    .hidden-copy-source {
+      position: absolute !important;
+      left: 0 !important;
+      top: 0 !important;
+      width: 1px !important;
+      height: 1px !important;
+      opacity: 0.0001 !important;
+      z-index: -1 !important;
+      overflow: hidden !important;
+      white-space: nowrap !important;
+      user-select: text !important;
+      -webkit-user-select: text !important;
+    }
   </style>
+
+  <!-- 5. 关于卖刀人点击路由逻辑 -->
   <script>
     document.addEventListener("DOMContentLoaded", function() {
       const headerWrapper = document.querySelector('.site-header .wrapper');
       if (headerWrapper) {
         headerWrapper.addEventListener('click', function(e) {
-          // 获取点击位置相对于容器右侧的距离
           const rect = headerWrapper.getBoundingClientRect();
           const clickX = e.clientX - rect.left;
-          // 如果点击区域落在右侧 120px 范围内（即“关于卖刀人”文字区域）
           if (clickX > rect.width - 120) {
             window.location.href = "{{ '/about/' | relative_url }}";
           }
@@ -175,4 +201,42 @@
       }
     });
   </script>
+
+  <!-- 6. MathJax 3 深度挂载：从渲染流内部直接输出隐藏复制源 -->
+  <script>
+    window.MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']],
+        displayMath: [['$$', '$$'], ['\\[', '\\]']]
+      },
+      options: {
+        renderActions: {
+          /* 核心改进：直接在 MathJax 渲染出 DOM 树、将其插入页面的那一瞬间，同步追加我们的复制 Span */
+          addCopySource: [200, function (doc) {
+            for (const math of doc.math) {
+              if (math.state() >= 12) { // 12 代表已经成功生成了 DOM 节点
+                const container = math.typesetRoot;
+                if (container && !container.nextSibling?.classList?.contains('hidden-copy-source')) {
+                  const isDisplay = math.display;
+                  const originalText = math.math; // 拿到最纯净原始的 LaTeX 源码
+                  
+                  if (originalText) {
+                    const formattedText = isDisplay ? `\n$$${originalText.trim()}$$\n` : ` $$${originalText.trim()}$$ `;
+                    
+                    const copySpan = document.createElement('span');
+                    copySpan.className = 'hidden-copy-source';
+                    copySpan.textContent = formattedText;
+                    
+                    // 紧跟在渲染出的公式容器后面插入
+                    container.parentNode.insertBefore(copySpan, container.nextSibling);
+                  }
+                }
+              }
+            }
+          }, '']
+        }
+      }
+    };
+  </script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 </head>
