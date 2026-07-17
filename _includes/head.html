@@ -19,28 +19,19 @@
 
   <style>
     /* ======================================================= */
-    /* 🆕 0. 全局字体大一统：精细化隔离，保障数字字母不变形，保留衬线美感 */
+    /* 🆕 0. 全局字体大一统：保障数字字母不变形，保留衬线美感 */
     /* ======================================================= */
     
-    /* 核心正文阅读区（段落、列表、链接、整篇文章）：采用标准防变形衬线链 */
-    body, 
-    p, 
-    li, 
-    span, 
-    a,
-    article {
-      /* 完美解决数字(1.5.2)变形！前段为规整的西文衬线，后段为防变形顶级中文宋体 */
+    body, p, li, span, a, article {
       font-family: "Times New Roman", Times, "Noto Serif SC", "Source Han Serif SC", "Songti SC", "SimSun", serif !important;
-      /* 强迫数字以等宽、齐平的形式渲染（彻底防止 .5. 显得松散、错位） */
       font-variant-numeric: tabular-nums !important;
-      letter-spacing: 0.02em; /* 适当增加极细微的字间距，提升阅读的呼吸感 */
+      letter-spacing: 0.02em;
     }
 
-    /* 章节与标题区：采用现代挺拔的无衬线字体，与正文形成视觉对比 */
     h1, h2, h3, h4, h5, h6, .chapter-title {
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "PingFang SC", "Microsoft YaHei", sans-serif !important;
-      font-weight: 600 !important;   /* 现代感偏粗设计，不让数字显得单薄 */
-      color: #2d2d2d !important;     /* 优雅的深灰黑，比纯黑更有质感 */
+      font-weight: 600 !important;
+      color: #2d2d2d !important;
       font-variant-numeric: tabular-nums !important;
     }
 
@@ -52,181 +43,118 @@
     }
 
     /* ======================================================= */
-    /* 1. 全局链接交互：默认无下划线，悬浮时变知乎蓝+出现下划线 */
+    /* 1. 全局链接交互：默认无下划线，悬浮时变知乎蓝 */
     /* ======================================================= */
-    a,
-    .site-footer a,
-    .social-media-list a,
-    .social-links a {
+    a, .site-footer a, .social-media-list a, .social-links a {
       text-decoration: none !important;
-      transition: color 0.2s ease; /* 丝滑变色过渡 */
+      transition: color 0.2s ease;
     }
 
-    a:hover,
-    .site-footer a:hover,
-    .social-media-list a:hover,
-    .social-links a:hover {
-      color: #0084FF !important;            /* 知乎蓝 */
-      text-decoration: underline !important; /* 悬浮下划线 */
-    }
-
-    /* 让网站主标题在悬浮时不出现下划线，保持干净 */
-    .site-title:hover {
-      text-decoration: none !important; 
-      color: #0084FF !important; /* 悬浮时变蓝，但无下划线 */
+    a:hover, .site-footer a:hover, .social-media-list a:hover, .social-links a:hover {
+      color: #0084FF !important;
+      text-decoration: underline !important;
     }
 
     /* ======================================================= */
-    /* 2. 头部导航栏对齐与“关于卖刀人”链接生成 */
+    /* 🚀 2. 头部导航栏全局吸顶与经典“左右对齐”布局 */
     /* ======================================================= */
-    
-    /* 显示左侧的“卖刀人的博客”网站标题 */
-/* ======================================================= */
-    /* 2. 头部导航栏对齐与“关于卖刀人”链接生成 */
-    /* ======================================================= */
-    
-    /* 🎨 核心修改：隐藏原本的“卖刀人的博客”，并用 CSS 写入“首页” */
-    .site-title {
-      display: inline-block !important;
-      float: none !important;
-      line-height: 64px !important;
-      margin: 0 !important;
-      padding: 0 !important;
-      white-space: nowrap !important;
-      font-size: 1.25rem !important;
-      font-weight: 500 !important;
-
-      /* 👇 新增这两行：隐藏原本后台传过来的 Jekyll title 纯文本 */
-      visibility: hidden !important; 
-      position: relative !important;
-    }
-
-    /* 👇 新增这个伪元素：将真实的“首页”文本注入到原位置，并让其重新可见 */
-    .site-title::before {
-      content: "首页" !important;
-      visibility: visible !important;
-      position: absolute !important;
-      left: 0 !important;
+    .site-header {
+      position: fixed !important;
       top: 0 !important;
-      color: #2d2d2d !important; /* 优雅的深灰色 */
-      transition: color 0.2s ease;
+      left: 0 !important;
+      width: 100% !important;
+      z-index: 9999 !important;
+      height: 64px !important;
+      background-color: #ffffff !important; /* 纯白背景，遮挡滚动上来的文章 */
+      border-bottom: 1px solid #e8e8e8 !important;
+      border-top: none !important;
     }
 
-    /* 鼠标悬浮到左侧“首页”时的交互状态（变蓝，无下划线） */
-    .site-title:hover::before {
-      color: #0084FF !important;
-    }
-
-    /* 🧹 隐藏系统自带的多余、不受控制的原始导航列表 */
-    .site-nav {
-      display: none !important; 
-    }
-
-    /* 🎨 核心：在导航栏容器右侧，用 CSS 直接生成一个干净的“关于卖刀人”链接 */
-    .site-header .wrapper::after {
-      content: "阅读指南";
-      cursor: pointer;
-      font-size: 1rem;
-      font-weight: 400;
-      color: #555 !important;
-      line-height: 64px;
-      transition: color 0.2s ease;
-    }
-
-    /* 鼠标悬浮到右侧“关于卖刀人”时的交互状态（变蓝，无下划线） */
-    .site-header .wrapper:hover::after {
-      color: #0084FF !important;
-    }
-
-    /* 链接点击跳转逻辑关联（利用 CSS 的绝对定位使这个区域可点击） */
+    /* 导航栏内部的 Flex 容器 */
     .site-header .wrapper {
-      position: relative;
+      position: relative !important;
       display: flex !important;
-      justify-content: space-between !important; /* 左标题，右关于 */
+      justify-content: space-between !important; /* 左“首页”，右“阅读指南”两端对齐 */
       align-items: center !important;
       height: 64px !important;
       padding: 0 20px !important;
       box-sizing: border-box !important;
-      
-      /* 让导航栏的最大宽度与文章阅读容器保持一致（820px）并居中对齐 */
       max-width: 820px !important;
       margin: 0 auto !important;
+      margin-top: 0 !important; /* 强行归零，防止被下方的全局 margin 误伤 */
     }
 
-    /* 创建一个隐形的透明覆盖层，覆盖在 ::after 上，实现点击跳转 */
-    .site-header .wrapper::before {
-      content: "";
-      position: absolute;
-      right: 20px;
-      width: 100px; /* 恰好覆盖“关于卖刀人”文字的宽度 */
-      height: 64px;
-      z-index: 10;
-      cursor: pointer;
+    /* 🧹 隐藏 Jekyll 默认输出的旧导航结构 */
+    .site-nav, .site-title {
+      display: none !important; 
+    }
+
+    /* 🎨 统一新导航项的基础样式 */
+    .nav-item-left,
+    .nav-item-right {
+      font-size: 1.25rem !important;
+      font-weight: 500 !important;
+      color: #2d2d2d !important;
+      line-height: 64px !important;
+      text-decoration: none !important;
+      transition: color 0.2s ease !important;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif !important;
+    }
+
+    /* 精准悬浮：只有鼠标悬浮在自己身上时才变蓝，绝不连带触发 */
+    .nav-item-left:hover,
+    .nav-item-right:hover {
+      color: #0084FF !important;
+      text-decoration: none !important; /* 保持导航栏干净无下划线 */
     }
 
     /* ======================================================= */
-    /* 🧹 3. 强效靠左对齐：消除段落、列表、卡片的异常缩进与空字 */
+    /* 🎯 3. 统一所有页面内容容器的顶部安全距离（不依赖 body） */
     /* ======================================================= */
-
-    /* 确保 Jekyll 默认的文章内容容器、Bootstrap 容器以及自定义容器全部左对齐 */
     .wrapper,
     .post-content,
     .reading-container,
     .about-content,
-    article {
-      padding-left: 0 !important;
-      margin-left: auto;
-      margin-right: auto;
+    article,
+    .container {
+      margin-top: 88px !important; /* 64px导航栏 + 24px精致留白 */
+      padding-top: 0 !important;   /* 清除可能导致高度差的默认内边距 */
     }
 
-    /* 彻底根除段落的首行缩进（首行空两格），保持左边距完全垂直对齐 */
-    .post-content p,
-    .reading-container p,
-    p {
+    /* 彻底根除段落的首行缩进 */
+    .post-content p, .reading-container p, p {
       text-indent: 0 !important;
       padding-left: 0 !important;
       margin-left: 0 !important;
       text-align: left !important;
     }
 
-    /* 优化无序列表 <ul> 和有序列表 <ol> */
-    .post-content ul,
-    .post-content ol,
-    .reading-container ul,
-    .reading-container ol,
-    ul,
-    ol {
-      padding-left: 1.25rem !important; 
+    /* 优化列表排版 */
+    .post-content ul, .post-content ol, .reading-container ul, .reading-container ol, ul, ol {
+      padding-left: 1.25rem !important;
       margin-left: 0 !important;
       text-align: left !important;
     }
 
-    /* 列表子项 <li> 的文字内容本身不进行额外缩进 */
     li {
       text-indent: 0 !important;
       padding-left: 0 !important;
     }
 
-    /* 确保所有自定义的卡片、警告框等也紧贴左侧对齐线 */
-    .reading-container .card,
-    .reading-container .alert {
+    .reading-container .card, .reading-container .alert {
       margin-left: 0 !important;
       margin-right: 0 !important;
-      padding-left: 1.25rem !important; /* 内部留适当内边距即可，外部靠左对齐 */
+      padding-left: 1.25rem !important;
     }
 
     /* ======================================================= */
-    /* 🔒 4. 划词复制优化：阻断 MathJax 渲染实体，指向隐形源码 */
+    /* 🔒 4. 划词复制优化 */
     /* ======================================================= */
-    mjx-container, 
-    .MathJax, 
-    [data-mml-node],
-    .mjx-container * {
+    mjx-container, .MathJax, [data-mml-node], .mjx-container * {
       user-select: none !important;
       -webkit-user-select: none !important;
     }
 
-    /* 隐形源码层：用户不可见，但完美响应鼠标选中并支持跨浏览器拷贝 */
     .hidden-copy-source {
       position: absolute !important;
       left: 0 !important;
@@ -239,45 +167,24 @@
       white-space: nowrap !important;
       user-select: text !important;
       -webkit-user-select: text !important;
-    }
-    /* 隐形源码层：用户不可见，但完美响应鼠标选中并支持跨浏览器拷贝 */
-    .hidden-copy-source {
-      position: absolute !important;
-      left: 0 !important;
-      top: 0 !important;
-      width: 1px !important;
-      height: 1px !important;
-      opacity: 0.0001 !important;
-      z-index: -1 !important;
-      overflow: hidden !important;
-      white-space: nowrap !important;
-      user-select: text !important;
-      -webkit-user-select: text !important;
-    } /* 👈 确保这里有一个闭合的右花括号 */
-
-    /* 🧹 彻底消除导航栏顶部突兀的黑线/粗边框 */
-    .site-header {
-      border-top: none !important;
     }
   </style>
 
-  <!-- 5. 关于卖刀人点击路由逻辑 -->
+  <!-- 5. 🚀 强效、干净的真实 DOM 双极导航栏重构逻辑 -->
   <script>
     document.addEventListener("DOMContentLoaded", function() {
       const headerWrapper = document.querySelector('.site-header .wrapper');
       if (headerWrapper) {
-        headerWrapper.addEventListener('click', function(e) {
-          const rect = headerWrapper.getBoundingClientRect();
-          const clickX = e.clientX - rect.left;
-          if (clickX > rect.width - 120) {
-            window.location.href = "{{ '/about/' | relative_url }}";
-          }
-        });
+        // 直接重构 wrapper 内部，只塞入两个真实的、两端分布的 <a> 链接
+        headerWrapper.innerHTML = `
+          <a class="nav-item-left" href="{{ '/' | relative_url }}">首页</a>
+          <a class="nav-item-right" href="{{ '/about/' | relative_url }}">阅读指南</a>
+        `;
       }
     });
   </script>
 
-  <!-- 6. MathJax 3 深度挂载：从渲染流内部直接输出隐藏复制源 -->
+  <!-- 6. MathJax 3 深度挂载 -->
   <script>
     window.MathJax = {
       tex: {
@@ -288,20 +195,17 @@
         renderActions: {
           addCopySource: [200, function (doc) {
             for (const math of doc.math) {
-              if (math.state() >= 12) { // 12 代表已经成功生成了 DOM 节点
+              if (math.state() >= 12) {
                 const container = math.typesetRoot;
                 if (container && !container.nextSibling?.classList?.contains('hidden-copy-source')) {
                   const isDisplay = math.display;
-                  const originalText = math.math; // 拿到最纯净原始的 LaTeX 源码
+                  const originalText = math.math;
                   
                   if (originalText) {
                     const formattedText = isDisplay ? `\n$$${originalText.trim()}$$\n` : ` $$${originalText.trim()}$$ `;
-                    
                     const copySpan = document.createElement('span');
                     copySpan.className = 'hidden-copy-source';
                     copySpan.textContent = formattedText;
-                    
-                    // 紧跟在渲染出的公式容器后面插入
                     container.parentNode.insertBefore(copySpan, container.nextSibling);
                   }
                 }
