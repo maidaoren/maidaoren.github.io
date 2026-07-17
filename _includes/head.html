@@ -17,7 +17,7 @@
   <link rel="apple-touch-icon" href="{{ "/assets/img/b.jpg" | relative_url }}">
   <link rel="stylesheet" href="{{ "/assets/css/custom-formula.css" | relative_url }}">
 
-  <style>
+<style>
     /* ======================================================= */
     /* 🆕 0. 全局字体大一统：保障数字字母不变形，保留衬线美感 */
     /* ======================================================= */
@@ -109,16 +109,26 @@
     }
 
     /* ======================================================= */
-    /* 🎯 3. 统一所有页面内容容器的顶部安全距离（不依赖 body） */
+    /* 🎯 3. 统一所有页面内容容器的顶部安全距离（精准防空隙叠置版） */
     /* ======================================================= */
-    .wrapper,
+    
+    /* 1. 内部包裹容器：只保留小幅间距，防止多层嵌套时 margin-top 堆叠导致大片空白 */
     .post-content,
     .reading-container,
     .about-content,
     article,
     .container {
-      margin-top: 88px !important; /* 64px导航栏 + 24px精致留白 */
-      padding-top: 0 !important;   /* 清除可能导致高度差的默认内边距 */
+      margin-top: 24px !important; 
+      padding-top: 0 !important;
+    }
+
+    /* 2. 最外层整体容器：精准针对导航栏下方的第一个大盒子进行 88px 物理下移 */
+    .site-header + .wrapper,
+    main.page-content,
+    body > .wrapper,
+    #main {
+      margin-top: 88px !important; /* 64px 导航栏高度 + 24px 极致舒适留白 */
+      padding-top: 0 !important;
     }
 
     /* 彻底根除段落的首行缩进 */

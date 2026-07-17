@@ -29,9 +29,6 @@ layout: default
 </style>
 
 <div class="home">
-<hr>
-  <h2 class="post-list-heading">文章列表</h2>
-
   <ul class="post-list">
     {%- for post in site.posts -%}
     <li>
