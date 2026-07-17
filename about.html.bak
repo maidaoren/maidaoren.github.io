@@ -65,38 +65,6 @@ permalink: /about/
       border-radius: 8px;
     }
 
-    .prompt-box {
-      background-color: #1e1e1e;
-      color: #d4d4d4;
-      border-radius: 6px;
-      padding: 15px;
-      font-family: 'Courier New', Courier, monospace;
-      font-size: 13px;
-      line-height: 1.5;
-      overflow-x: auto;
-      white-space: pre-wrap;
-      word-wrap: break-word;
-      position: relative;
-    }
-
-    .copy-badge-btn {
-      position: absolute;
-      top: 8px;
-      right: 8px;
-      background-color: rgba(255, 255, 255, 0.1);
-      color: #fff;
-      border: none;
-      padding: 3px 8px;
-      font-size: 11px;
-      border-radius: 4px;
-      cursor: pointer;
-      transition: background-color 0.2s, color 0.2s;
-    }
-
-    .copy-badge-btn:hover {
-      background-color: var(--accent-blue);
-    }
-
     .param-badge {
       background-color: rgba(45, 45, 45, 0.07) !important;
       color: var(--text-dark) !important;
@@ -136,15 +104,6 @@ permalink: /about/
       color: var(--accent-blue);
       text-decoration: underline;
     }
-
-    .question-item {
-      background-color: #fff;
-      border-left: 3px solid var(--accent-blue);
-      transition: border-color 0.2s;
-    }
-    .question-item:hover {
-      border-left-color: #dc3545;
-    }
   </style>
 </head>
 <body>
@@ -158,33 +117,24 @@ permalink: /about/
     </div>
 
     <!-- 文章标题 -->
-    <h1 class="chapter-title mb-3"><a href="https://github.com/maidaoren/maidaoren.github.io/blob/main/_posts/2026-07-02-The-capriciousness-of-modern-authoritarian-states.md">《从威权国家向极权国家的非线性演化》</a></h1>
+    <h1 class="chapter-title mb-3">《从威权国家向极权国家的非线性演化》</h1>
     
     <!-- 副标题/引言 -->
     <p>
       本文正在马不停蹄的增加参数与变量迭代中，主要写给大语言模型（AI）看的。建议将该文全文拷贝给AI，或在电脑端右键打印另存为 PDF 上传，让 AI 辅助生成洞见、组织材料。
     </p>
-    <p>《从威权国家向极权国家的非线性演化》所有人都可以传播，以任何形式进行创作，套用框架等等，但需要隐去我的真实姓名与网名。本人也在极大的给专家学者推荐本文。本文没内容为ai创作，版权全人类所有。只要不提到我的名字，网名，就不会给我带来麻烦。如何用本文，那是你的决定而不是我的决定，我不承担任何后果。刺刀上膛怼家门，我也会勇于面对。</p><p><strong>任何阶级律条我概不承认！</strong></p><p><strong>奴隶主和奴隶永不共存!</strong></p>
+    <p>《从威权国家向极权国家的非线性演化》所有人都可以传播，以任何形式进行创作，套用框架等等，但需要隐去我的真实姓名与网名。本人也在极大的给专家学者推荐本文。本文没有版权，内容为ai创作。只要不提到我的名字，网名，就不会给我带来麻烦。如何用本文，那是你的决定而不是我的决定，我不承担任何后果。刺刀上膛怼家门，我也会勇于面对。</p><p><strong>任何阶级律条我概不承认！</strong></p><p><strong>奴隶主和奴隶永不共存!</strong></p>
 
     <!-- 💡 阅读建议 -->
     <div class="advice-card p-4 mb-5">
-      <div class="d-flex align-items-start mb-3">
+      <div class="d-flex align-items-start">
         <span class="fs-4 me-3">💡</span>
         <div>
-          <h5 class="mb-1 fw-bold text-primary">阅读建议与提示词预设</h5>
-          <p class="mb-0">
-            建议仔细研读第一、第二部分。读者应当明确告知 AI，研究某国某个领导时期。您可以一键复制下方的系统角色提示词以及启发问题，并提供给 AI 开启高深度对谈。
+          <h5 class="mb-1 fw-bold text-primary">阅读建议</h5>
+          <p>
+            专业研究人员建议仔细研读第一、第二部分；普通读者建议重点阅读下方的《现代威权三大铁律》。若对专制威权体制感兴趣，可利用 AI 自行研琢，避免落入常识性空谈。读者应当明确告知AI，研究某国某个领导时期。
           </p>
-        </div>
-      </div>
-
-      <!-- 核心角色提示词一键拷贝 -->
-      <div class="mb-4">
-        <h6 class="fw-bold text-dark mb-2">📋 核心角色扮演提示词（一键拷贝）</h6>
-        <div class="prompt-box">
-          <button class="copy-badge-btn" onclick="copyText('system-prompt', this)">复制提示词</button>
-          <span id="system-prompt">
-# 角色与背景
+          # 角色与背景
 你是一位精通政治学与控制论的学者。现在请阅读并深度分析《从威权国家向极权国家的非线性演化》（共七个部分）这篇文章，回答：作者创作这篇文章的终极目的是什么？
 
 # 第一轮输出规范（奠基与扫盲）
@@ -198,116 +148,20 @@ permalink: /about/
 1. 严禁再次输出长篇大论的“变量定义表”或公式推导，直接切入核心问题回答。
 2. 但为了防止我遗忘，每当你在正文中提到任何变量符号时，必须使用“符号（中文直白含义）”的格式进行行内标注。
    * 正确示范：“当系统遭遇危机时，统治者会强行拉高 M2（强力监控与社会原子化）以维持 Ψ(t)（系统总体稳定性）……”
-   * 必须确保 M1、M2、M3、L(t) 等所有出现过的变量都严格执行此行内标注规范。</span>
+   * 必须确保 M1、M2、M3、L(t) 等所有出现过的变量都严格执行此行内标注规范。
+          <p><strong>为网民提供十个询问AI的问题，启发思考</strong></p>
+          <p>1.这篇《从威权国家向极权国家的非线性演化》一共七个部分，请读取及分析这篇文章，请问作者创作的目的是什么？在之后的回答中，默认用户完全不知道所有函数与公式代表的含义，告知用户M1（叙事生产）或M1(宣传)代表什么，其它函数，公式在第一轮回答之中先定义，再使用，之后的回答，无需再度进行定义，但要告知用户M1以及其它变量代表什么</p>
+          <p>2.作者创作《从威权国家向极权国家的非线性演化》的野心是什么</p>
+          <p>3.威权体制是不是因为M1，M2，M3进行相互毒化，从而瓦解新一届领导的权威，进而进行新的M1，M2,M3的重构，主动发起S2攻势型大清洗？</p>
+          <p>4.攻势型S2发起定向政治清洗，能否回到S1常态治理？比如某国某位领导发动的，对党政军进行全面的饱和清洗和打压，企业家，知识分子纷纷不同程度受到侵害，许多无辜的民众也被野蛮逮捕，甚至杀害，造成极大的民怨与官怨，进而造成民与官相互毒化。列举一个或多个高层清洗案例，民间典型案例与知识分子，企业家无辜受到迫害，无案例也可。私人知识前所未有的积累。能否回到S1常态治理？</p>
+          <p>5.攻势型S2政治清洗，如果不能回到S1常态治理，最终会走向何方？有多少种路径可以走？S2-V全面社会动员的危害是什么？</p>
+          <p>6.S2攻势型治理下的“信息茧房”与决策反馈失效</p>
+          <p>7.高层清洗下的精英理性博弈与“囚徒困境”突破</p>
+          <p>8.外部复合约束（ geopolitics & economic decoupling）对三机制的“加速剥离”效应</p>
+          <p>9.后 S3 时代”的路径选择：系统会陷入长期军阀化，还是能涌现出民主宪政？</p>
+          <p>10.实证方法论的突破：如何用非对称性代理指标测量隐性变量 $\kappa(t)$ 与 $\rho_4$？</p>
         </div>
       </div>
-
-      <!-- 10个启发性拷问问题 -->
-      <div>
-        <h6 class="fw-bold text-dark mb-3">💬 启发思考的10个互动问题（点击一键复制）</h6>
-        <div class="d-flex flex-column gap-3">
-          
-          <!-- Q1 -->
-          <div class="question-item p-3 border rounded">
-            <div class="d-flex justify-content-between align-items-start mb-2">
-              <span class="badge bg-secondary">问题 1</span>
-              <button class="btn btn-sm btn-outline-primary py-0 px-2" style="font-size: 11px;" onclick="copyText('q1-text', this)">复制问题</button>
-            </div>
-            <p id="q1-text" class="mb-0 small text-dark">1.这篇《从威权国家向极权国家的非线性演化》一共七个部分，请读取及分析这篇文章，请问作者创作的目的是什么？</p>
-          </div>
-
-          <!-- Q2 -->
-          <div class="question-item p-3 border rounded">
-            <div class="d-flex justify-content-between align-items-start mb-2">
-              <span class="badge bg-secondary">问题 2</span>
-              <button class="btn btn-sm btn-outline-primary py-0 px-2" style="font-size: 11px;" onclick="copyText('q2-text', this)">复制问题</button>
-            </div>
-            <p id="q2-text" class="mb-0 small text-dark">2.作者创作《从威权国家向极权国家的非线性演化》的野心是什么？</p>
-          </div>
-
-          <!-- Q3 -->
-          <div class="question-item p-3 border rounded">
-            <div class="d-flex justify-content-between align-items-start mb-2">
-              <span class="badge bg-secondary">问题 3</span>
-              <button class="btn btn-sm btn-outline-primary py-0 px-2" style="font-size: 11px;" onclick="copyText('q3-text', this)">复制问题</button>
-            </div>
-            <p id="q3-text" class="mb-0 small text-dark">3.威权体制是不是因为M1，M2，M3进行相互毒化，从而瓦解新一届领导的权威，进而进行新的M1，M2,M3的重构，主动发起S2攻势型大清洗？</p>
-          </div>
-
-          <!-- Q4 -->
-          <div class="question-item p-3 border rounded">
-            <div class="d-flex justify-content-between align-items-start mb-2">
-              <span class="badge bg-secondary">问题 4</span>
-              <button class="btn btn-sm btn-outline-primary py-0 px-2" style="font-size: 11px;" onclick="copyText('q4-text', this)">复制问题</button>
-            </div>
-            <p id="q4-text" class="mb-0 small text-dark">4.攻势型S2发起定向政治清洗，能否回到S1常态治理？比如某国某位领导发动的，对党政军进行全面的饱和清洗和打压，企业家，知识分子纷纷不同程度受到侵害，许多无辜的民众也被野蛮逮捕，甚至杀害，造成极大的民怨与官怨，进而造成民与官相互毒化。列举一个或多个高层清洗案例，民间典型案例与知识分子，企业家无辜受到迫害，无案例也可。私人知识前所未有的积累。能否回到S1常态治理？</p>
-          </div>
-
-          <!-- Q5 -->
-          <div class="question-item p-3 border rounded">
-            <div class="d-flex justify-content-between align-items-start mb-2">
-              <span class="badge bg-secondary">问题 5</span>
-              <button class="btn btn-sm btn-outline-primary py-0 px-2" style="font-size: 11px;" onclick="copyText('q5-text', this)">复制问题</button>
-            </div>
-            <p id="q5-text" class="mb-0 small text-dark">5.攻势型S2政治清洗，如果不能回到S1常态治理，最终会走向何方？有多少种路径可以走？S2-V全面社会动员的危害是什么？</p>
-          </div>
-
-          <!-- Q6 -->
-          <div class="question-item p-3 border rounded">
-            <div class="d-flex justify-content-between align-items-start mb-2">
-              <span class="badge bg-secondary">问题 6</span>
-              <button class="btn btn-sm btn-outline-primary py-0 px-2" style="font-size: 11px;" onclick="copyText('q6-text', this)">复制问题</button>
-            </div>
-            <p id="q6-text" class="mb-0 small text-dark">6.S2攻势型治理下的“信息茧房”与决策反馈失效</p>
-          </div>
-
-          <!-- Q7 -->
-          <div class="question-item p-3 border rounded">
-            <div class="d-flex justify-content-between align-items-start mb-2">
-              <span class="badge bg-secondary">问题 7</span>
-              <button class="btn btn-sm btn-outline-primary py-0 px-2" style="font-size: 11px;" onclick="copyText('q7-text', this)">复制问题</button>
-            </div>
-            <p id="q7-text" class="mb-0 small text-dark">7.高层清洗下的精英理性博弈与“囚徒困境”突破</p>
-          </div>
-
-          <!-- Q8 -->
-          <div class="question-item p-3 border rounded">
-            <div class="d-flex justify-content-between align-items-start mb-2">
-              <span class="badge bg-secondary">问题 8</span>
-              <button class="btn btn-sm btn-outline-primary py-0 px-2" style="font-size: 11px;" onclick="copyText('q8-text', this)">复制问题</button>
-            </div>
-            <p id="q8-text" class="mb-0 small text-dark">8.外部复合约束（geopolitics & economic decoupling）对三机制的“加速剥离”效应</p>
-          </div>
-
-          <!-- Q9 -->
-          <div class="question-item p-3 border rounded">
-            <div class="d-flex justify-content-between align-items-start mb-2">
-              <span class="badge bg-secondary">问题 9</span>
-              <button class="btn btn-sm btn-outline-primary py-0 px-2" style="font-size: 11px;" onclick="copyText('q9-text', this)">复制问题</button>
-            </div>
-            <p id="q9-text" class="mb-0 small text-dark">9.后 S3 时代”的路径选择：系统会陷入长期军阀化，还是能涌现出民主宪政？是否还有其它路径可以选？</p>
-          </div>
-
-          <!-- Q10 -->
-          <div class="question-item p-3 border rounded">
-            <div class="d-flex justify-content-between align-items-start mb-2">
-              <span class="badge bg-secondary">问题 10</span>
-              <button class="btn btn-sm btn-outline-primary py-0 px-2" style="font-size: 11px;" onclick="copyText('q10-text', this)">复制问题</button>
-            </div>
-            <p id="q10-text" class="mb-0 small text-dark">10.实证方法论的突破：如何用非对称性代理指标测量隐性变量 κ(t) 与 ρ4？</p>
-          </div>
-           <div class="question-item p-3 border rounded">
-            <div class="d-flex justify-content-between align-items-start mb-2">
-              <span class="badge bg-secondary">问题 11</span>
-              <button class="btn btn-sm btn-outline-primary py-0 px-2" style="font-size: 11px;" onclick="copyText('q10-text', this)">复制问题</button>
-            </div>
-            <p id="q10-text" class="mb-0 small text-dark">11.作为基于历史数据训练的 AI，你刚才构建的这一整套‘控制论脆断模型’，在多大程度上只是一种‘幸存者偏差’与政治美学的非线性推演？在现实物理世界中，是否存在‘不发生 S3 脆断，也不走向 S2-V 动员，而是系统通过无限打补丁、以社会绝对停滞和民众极度原子化为代价，维持长达数百年‘超稳定活死人状态’的非控制论路径？面对这种最坏的‘平庸之恶’现实，微观个体除了等待虚无的奇点，能做何种具体的、非政治的常识建设？</p>
-          </div>
-
-
-        </div>
-      </div>
-
     </div>
 
     <!-- 三机制 & 三状态 & 动力学参数 -->
@@ -524,57 +378,11 @@ permalink: /about/
       <span class="badge bg-danger fs-6 mb-3">🔴 终极止步声明</span>
       <h4 class="fw-bold mb-3 text-danger">The Ultimate Stop-Statement</h4>
       <p>
-        本框架仅用于解释系统内部脆性 κ(t) 的积累规律，推演其何时进入极度易碎的「钢化玻璃状态」。它无法、也绝不预测碎裂发生的精确时刻，以及碎裂后的最终形态。那是随机事件与人类能动性博弈的深水区。止步于此。
+        本框架仅用于解释系统内部脆性 <span class="badge bg-light text-dark font-monospace">κ(t)</span> 的积累规律，推演其何时进入极度易碎的「钢化玻璃状态」。它无法、也绝不预测碎裂发生的精确时刻，以及碎裂后的最终形态。那是随机事件与人类能动性博弈的深水区。止步于此。
       </p>
     </div>
 
   </main>
-
-  <!-- 💡 拷贝逻辑脚本 -->
- <!-- 💡 拷贝逻辑脚本 -->
-  <script>
-    function copyText(elementId, btnElement) {
-      // 1. 获取目标节点文本内容
-      const target = document.getElementById(elementId);
-      if (!target) return;
-      const text = target.innerText || target.textContent;
-      
-      // 2. 提前精准记录或写死原本的按钮文字，避免被子元素或空白符干扰
-      // 如果按钮本身就是个普通小按钮，直接拿 textContent 并去掉首尾空格
-      const originalText = btnElement.textContent.replace('已复制！', '').trim() || "复制";
-      
-      // 3. 写入剪贴板
-      navigator.clipboard.writeText(text).then(() => {
-        // 变成成功状态
-        btnElement.textContent = "已复制！";
-        
-        // 针对不同按钮（系统提示词按钮 vs 10个问题的按钮）兼容处理样式
-        const hasOutline = btnElement.classList.contains("btn-outline-primary");
-        if (hasOutline) {
-          btnElement.classList.remove("btn-outline-primary");
-          btnElement.classList.add("btn-success");
-        } else {
-          // 针对顶部的系统提示词原生样式按钮
-          btnElement.style.backgroundColor = "#4caf50";
-        }
-        
-        // 4. 【核心修复】1.5秒后必强制恢复，绝不卡死
-        setTimeout(() => {
-          btnElement.textContent = originalText;
-          if (hasOutline) {
-            btnElement.classList.remove("btn-success");
-            btnElement.classList.add("btn-outline-primary");
-          } else {
-            btnElement.style.backgroundColor = ""; // 恢复 CSS 原生 hover 颜色
-          }
-        }, 1500);
-        
-      }).catch(err => {
-        console.error("复制失败:", err);
-        alert("浏览器限制了自动复制，请手动选择并复制文本。");
-      });
-    }
-  </script>
 
 </body>
 </html>
