@@ -81,6 +81,11 @@
     /* ======================================================= */
     
     /* 显示左侧的“卖刀人的博客”网站标题 */
+/* ======================================================= */
+    /* 2. 头部导航栏对齐与“关于卖刀人”链接生成 */
+    /* ======================================================= */
+    
+    /* 🎨 核心修改：隐藏原本的“卖刀人的博客”，并用 CSS 写入“首页” */
     .site-title {
       display: inline-block !important;
       float: none !important;
@@ -88,9 +93,28 @@
       margin: 0 !important;
       padding: 0 !important;
       white-space: nowrap !important;
-      color: #2d2d2d !important; /* 优雅的深灰色 */
       font-size: 1.25rem !important;
       font-weight: 500 !important;
+
+      /* 👇 新增这两行：隐藏原本后台传过来的 Jekyll title 纯文本 */
+      visibility: hidden !important; 
+      position: relative !important;
+    }
+
+    /* 👇 新增这个伪元素：将真实的“首页”文本注入到原位置，并让其重新可见 */
+    .site-title::before {
+      content: "首页" !important;
+      visibility: visible !important;
+      position: absolute !important;
+      left: 0 !important;
+      top: 0 !important;
+      color: #2d2d2d !important; /* 优雅的深灰色 */
+      transition: color 0.2s ease;
+    }
+
+    /* 鼠标悬浮到左侧“首页”时的交互状态（变蓝，无下划线） */
+    .site-title:hover::before {
+      color: #0084FF !important;
     }
 
     /* 🧹 隐藏系统自带的多余、不受控制的原始导航列表 */
@@ -100,7 +124,7 @@
 
     /* 🎨 核心：在导航栏容器右侧，用 CSS 直接生成一个干净的“关于卖刀人”链接 */
     .site-header .wrapper::after {
-      content: "关于卖刀人";
+      content: "阅读指南";
       cursor: pointer;
       font-size: 1rem;
       font-weight: 400;
@@ -215,6 +239,25 @@
       white-space: nowrap !important;
       user-select: text !important;
       -webkit-user-select: text !important;
+    }
+    /* 隐形源码层：用户不可见，但完美响应鼠标选中并支持跨浏览器拷贝 */
+    .hidden-copy-source {
+      position: absolute !important;
+      left: 0 !important;
+      top: 0 !important;
+      width: 1px !important;
+      height: 1px !important;
+      opacity: 0.0001 !important;
+      z-index: -1 !important;
+      overflow: hidden !important;
+      white-space: nowrap !important;
+      user-select: text !important;
+      -webkit-user-select: text !important;
+    } /* 👈 确保这里有一个闭合的右花括号 */
+
+    /* 🧹 彻底消除导航栏顶部突兀的黑线/粗边框 */
+    .site-header {
+      border-top: none !important;
     }
   </style>
 

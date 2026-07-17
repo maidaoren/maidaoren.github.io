@@ -27,6 +27,7 @@ markdown: kramdown
 kramdown:
   input: GFM
   math_engine: null   # 让 Jekyll 后端对公式完全放手，由前端 MathJax 渲染，彻底解决下划线被吞的问题
+  smart_quotes: ["ldquo", "rdquo", "lsquo", "rsquo"]
   
 mathjax: true        # 用于激活 head.html 中的判断开关
 # ===================================================
