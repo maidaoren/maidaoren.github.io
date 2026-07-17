@@ -4,7 +4,11 @@
   <div class="wrapper">
     <div class="footer-col-wrapper">
       <div class="footer-col">
-        <p class="feed-description footer-col-wrapper">{{ site.description | escape }}</p>
+        <!-- 🎯 就在这里：我们直接给这句诗加上了 1.2rem 的字号（约19px），并加粗，让其字重与上方的标题呼应 -->
+        <p class="feed-description footer-col-wrapper" style="font-size:  var(--reading-font-size) !important; font-weight: 500 !important; color: #4a4a4a !important;">
+          {{ site.description | escape }}
+        </p>
+
       </div>
       <div class="footer-col">
         {%- if site.author %}
