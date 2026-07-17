@@ -23,8 +23,16 @@
     /* ======================================================= */
     
     body, p, li, span, a, article {
+      /* 1. 🏁 禁用连体合并：彻底阻止普通的 -- 或 —— 被西文字体强行拉长成一整条 */
+      font-variant-ligatures: no-common-ligatures !important;
+      
+      /* 2. 🎨 字体序列：确保西文 Times 优先，中文宋体紧随其后 */
       font-family: "Times New Roman", Times, "Noto Serif SC", "Source Han Serif SC", "Songti SC", "SimSun", serif !important;
+      
+      /* 3. 🔢 数字等宽：强迫所有数字对齐，防止 .5. 等结构显得松散 */
       font-variant-numeric: tabular-nums !important;
+      
+      /* 4. 💨 呼吸感：给正文字体留出极细微的字间距，提升阅读体验 */
       letter-spacing: 0.02em;
     }
 
