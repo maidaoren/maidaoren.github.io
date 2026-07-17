@@ -19,6 +19,39 @@
 
   <style>
     /* ======================================================= */
+    /* 🆕 0. 全局字体大一统：精细化隔离，保障数字字母不变形，保留衬线美感 */
+    /* ======================================================= */
+    
+    /* 核心正文阅读区（段落、列表、链接、整篇文章）：采用标准防变形衬线链 */
+    body, 
+    p, 
+    li, 
+    span, 
+    a,
+    article {
+      /* 完美解决数字(1.5.2)变形！前段为规整的西文衬线，后段为防变形顶级中文宋体 */
+      font-family: "Times New Roman", Times, "Noto Serif SC", "Source Han Serif SC", "Songti SC", "SimSun", serif !important;
+      /* 强迫数字以等宽、齐平的形式渲染（彻底防止 .5. 显得松散、错位） */
+      font-variant-numeric: tabular-nums !important;
+      letter-spacing: 0.02em; /* 适当增加极细微的字间距，提升阅读的呼吸感 */
+    }
+
+    /* 章节与标题区：采用现代挺拔的无衬线字体，与正文形成视觉对比 */
+    h1, h2, h3, h4, h5, h6, .chapter-title {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "PingFang SC", "Microsoft YaHei", sans-serif !important;
+      font-weight: 600 !important;   /* 现代感偏粗设计，不让数字显得单薄 */
+      color: #2d2d2d !important;     /* 优雅的深灰黑，比纯黑更有质感 */
+      font-variant-numeric: tabular-nums !important;
+    }
+
+    /* 严格保护：公式容器内部及 LaTeX 源码的字体绝对不受全局干扰 */
+    .custom-formula-container,
+    .custom-formula-text,
+    .custom-formula-text * {
+      font-family: "Times New Roman", Times, serif !important;
+    }
+
+    /* ======================================================= */
     /* 1. 全局链接交互：默认无下划线，悬浮时变知乎蓝+出现下划线 */
     /* ======================================================= */
     a,
@@ -133,7 +166,6 @@
     }
 
     /* 优化无序列表 <ul> 和有序列表 <ol> */
-    /* 默认主题往往给列表加了过大的 padding-left，这里强行收紧，仅保留放圆点/数字所需的 1.25rem */
     .post-content ul,
     .post-content ol,
     .reading-container ul,
@@ -211,7 +243,6 @@
       },
       options: {
         renderActions: {
-          /* 核心改进：直接在 MathJax 渲染出 DOM 树、将其插入页面的那一瞬间，同步追加我们的复制 Span */
           addCopySource: [200, function (doc) {
             for (const math of doc.math) {
               if (math.state() >= 12) { // 12 代表已经成功生成了 DOM 节点
