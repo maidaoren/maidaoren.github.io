@@ -1,56 +1,46 @@
-# Welcome to Jekyll!
-#
-# This config file is meant for settings that affect your whole blog, values
-# which you are expected to set up once and rarely edit after that. If you find
-# yourself editing this file very often, consider using Jekyll's data files
-# feature for the data you need to update frequently.
-#
-# For technical reasons, this file is *NOT* reloaded automatically when you use
-# 'bundle exec jekyll serve'. If you change this file, please restart the server process.
+# -----------------------------------------------------------------------------
+# 1. 网站基础信息 (Site Settings)
+# -----------------------------------------------------------------------------
+title: "卖刀人的博客"
+description: "满堂花醉三千客，一剑霜寒十四州"
+url: "https://maidaoren.github.io"
+baseurl: ""
 
-# Site settings
-title: 卖刀人的博客
-description: >-
-  满堂花醉三千客，一剑霜寒十四州
-baseurl: "" 
-url: "" 
 twitter_username: O0o362
 github_username: maidaoren
 
-# Build settings
+# -----------------------------------------------------------------------------
+# 2. 构建与主题设置 (Build Settings)
+# -----------------------------------------------------------------------------
 theme: minima
-#plugins:
- # - jekyll-feed
-
-# ====== Markdown 与数学公式核心配置（已合并去重） ======
-markdown: kramdown
-kramdown:
-  input: GFM
-  math_engine: null   # 让 Jekyll 后端对公式完全放手，由前端 MathJax 渲染，彻底解决下划线被吞的问题
-  
-mathjax: true        # 用于激活 head.html 中的判断开关
-# ===================================================
 
 include:
   - _includes
   - _layouts
 
-# 网站核心配置
-title: "卖刀人的博客"
-description: "满堂花醉三千客，一剑霜寒十四州" # 👈 这里写一句话简介，替换掉现在推特里重复的第二行字
-url: "https://maidaoren.github.io"          # 👈 必须填写你在线上的完整网址
+# -----------------------------------------------------------------------------
+# 3. Markdown / Kramdown 引擎与公式配置
+# -----------------------------------------------------------------------------
+markdown: kramdown
+kramdown:
+  input: GFM
+  # 🎯 修复报错：正确锁死直引号，禁用智能引号转换
+  smart_quotes: quot,quot,quot,quot
+  math_engine: null
 
+mathjax: true
 
-
-# Exclude from processing.
-# exclude:
-#   - .sass-cache/
-#   - .jekyll-cache/
-#   - gemfiles/
-#   - Gemfile
-#   - Gemfile.lock
-#   - node_modules/
-#   - vendor/bundle/
-#   - vendor/cache/
-#   - vendor/gems/
-#   - vendor/ruby/
+# -----------------------------------------------------------------------------
+# 4. 忽略目录
+# -----------------------------------------------------------------------------
+exclude:
+  - .sass-cache/
+  - .jekyll-cache/
+  - gemfiles/
+  - Gemfile
+  - Gemfile.lock
+  - node_modules/
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
