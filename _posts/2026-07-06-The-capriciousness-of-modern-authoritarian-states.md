@@ -2,8 +2,6 @@
 layout: post
 title: 从威权国家向极权国家的非线性演化
 date: 2026-07-06
-sticky: true
-sticky_order: 1
 ---
 * 目录
 {:toc}
