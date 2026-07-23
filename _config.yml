@@ -14,9 +14,16 @@ github_username: maidaoren
 # -----------------------------------------------------------------------------
 theme: minima
 
-include:
-  - _includes
-  - _layouts
+# 插件列表：补全你在 Gemfile 中引用的插件
+plugins:
+  - jekyll-paginate
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+# 🎯 全站文章列表分页配置（先设为 1 进行测试！）
+paginate: 10
+paginate_path: "/page:num/"
 
 # -----------------------------------------------------------------------------
 # 3. Markdown / Kramdown 引擎与公式配置
@@ -24,14 +31,14 @@ include:
 markdown: kramdown
 kramdown:
   input: GFM
-  # 🎯 修复报错：正确锁死直引号，禁用智能引号转换
+  # 🎯 锁定直引号，禁用智能引号转换
   smart_quotes: quot,quot,quot,quot
   math_engine: null
 
 mathjax: true
 
 # -----------------------------------------------------------------------------
-# 4. 忽略目录
+# 4. 忽略目录 (Exclude - 已剔除 _layouts 与 _includes)
 # -----------------------------------------------------------------------------
 exclude:
   - .sass-cache/

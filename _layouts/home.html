@@ -7,29 +7,126 @@ layout: default
     <h1 class="page-heading">{{ page.title }}</h1>
   {%- endif -%}
 
-
-
   {{ content }}
 
-  {%- assign posts = site.posts -%}
+  {%- assign date_format = site.minima.date_format | default: "%Y-%m-%d" -%}
+
+  <!--
+    ============================================================
+    📌 置顶文章区块
+    - 只有 paginator.page == 1（首页）才展示
+    - 按 sticky_order 升序排列
+    - 如果文章没有 sticky_order，默认排到最后
+    ============================================================
+  -->
+  {%- if paginator.page == 1 or paginator.page == nil -%}
+    {%- assign sticky_posts = site.posts | where: "sticky", true -%}
+    {%- if sticky_posts.size > 0 -%}
+      {%- comment %}手动按 sticky_order 排序（Jekyll 不支持 sort by custom key 直接）{% endcomment -%}
+      {%- assign sorted_sticky = sticky_posts | sort: "sticky_order" -%}
+      <ul class="post-list sticky-post-list">
+        {%- for post in sorted_sticky -%}
+        <li>
+          <h3>
+            <a class="post-link" href="{{ post.url | relative_url }}">
+              <span class="sticky-badge">📌 置顶</span>{{ post.title | escape }}
+            </a>
+          </h3>
+          {%- if post.excerpt -%}
+            <p class="post-excerpt">{{ post.excerpt | strip_html | truncate: 120 }}</p>
+          {%- endif -%}
+          <span class="post-meta">📅 {{ post.date | date: date_format }}</span>
+        </li>
+        {%- endfor -%}
+      </ul>
+      <hr style="border: none; border-top: 1px dashed var(--warm-divider); margin: 2rem 0;">
+    {%- endif -%}
+  {%- endif -%}
+
+  <!--
+    ============================================================
+    📄 常规文章列表
+    - paginator.posts 已经自动分页（每页 10 篇）
+    - 过滤掉置顶文章，避免重复
+    ============================================================
+  -->
+  {%- assign posts = paginator.posts -%}
 
   {%- if posts.size > 0 -%}
     <ul class="post-list">
-      {%- assign date_format = site.minima.date_format | default: "%Y-%m-%d" -%}
       {%- for post in posts -%}
-      <li>
-        <h3>
-          <a class="post-link" href="{{ post.url | relative_url }}">
-            {{ post.title | escape }}
-          </a>
-        </h3>
-                <span class="post-meta">{{ post.date | date: date_format }}</span>
+        {%- unless post.sticky -%}
+        <li>
+          <h3>
+            <a class="post-link" href="{{ post.url | relative_url }}">
+              {{ post.title | escape }}
+            </a>
+          </h3>
+          {%- if post.excerpt -%}
+            <p class="post-excerpt">{{ post.excerpt | strip_html | truncate: 120 }}</p>
+          {%- endif -%}
+          <span class="post-meta">📅 {{ post.date | date: date_format }}</span>
 
-        {%- if site.show_excerpts -%}
-          {{ post.excerpt }}
-        {%- endif -%}
-      </li>
+          {%- if post.tags -%}
+            <span style="margin-left: 12px;">
+              {%- for tag in post.tags limit: 3 -%}
+                <span class="tag">{{ tag }}</span>
+              {%- endfor -%}
+            </span>
+          {%- endif -%}
+        </li>
+        {%- endunless -%}
       {%- endfor -%}
     </ul>
+
+    <!-- 📄 Bootstrap 5 分页组件 -->
+    {%- if paginator.total_pages > 1 -%}
+      <nav aria-label="Page navigation" class="my-4">
+        <ul class="pagination justify-content-center">
+          <!-- 上一页 -->
+          <li class="page-item {% unless paginator.previous_page %}disabled{% endunless %}">
+            {%- if paginator.previous_page -%}
+              <a class="page-link" href="{{ paginator.previous_page_path | relative_url }}" aria-label="Previous">
+                <span aria-hidden="true">&laquo;</span>
+              </a>
+            {%- else -%}
+              <span class="page-link" aria-label="Previous">
+                <span aria-hidden="true">&laquo;</span>
+              </span>
+            {%- endif -%}
+          </li>
+
+          <!-- 页码 -->
+          {%- for p in (1..paginator.total_pages) -%}
+            {%- if p == paginator.page -%}
+              <li class="page-item active" aria-current="page">
+                <span class="page-link">{{ p }}</span>
+              </li>
+            {%- elsif p == 1 -%}
+              <li class="page-item">
+                <a class="page-link" href="{{ '/' | relative_url }}">{{ p }}</a>
+              </li>
+            {%- else -%}
+              <li class="page-item">
+                <a class="page-link" href="{{ site.paginate_path | relative_url | replace: ':num', p }}">{{ p }}</a>
+              </li>
+            {%- endif -%}
+          {%- endfor -%}
+
+          <!-- 下一页 -->
+          <li class="page-item {% unless paginator.next_page %}disabled{% endunless %}">
+            {%- if paginator.next_page -%}
+              <a class="page-link" href="{{ paginator.next_page_path | relative_url }}" aria-label="Next">
+                <span aria-hidden="true">&raquo;</span>
+              </a>
+            {%- else -%}
+              <span class="page-link" aria-label="Next">
+                <span aria-hidden="true">&raquo;</span>
+              </span>
+            {%- endif -%}
+          </li>
+        </ul>
+      </nav>
+    {%- endif -%}
   {%- endif -%}
 </div>

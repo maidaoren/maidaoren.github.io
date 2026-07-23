@@ -1,24 +1,10 @@
-<footer class="site-footer h-card">
-  <data class="u-url" href="{{ "/" | relative_url }}"></data>
-
-  <div class="wrapper">
-    <div class="footer-col-wrapper">
-      <div class="footer-col">
-        <!-- 🎯 就在这里：我们直接给这句诗加上了 1.2rem 的字号（约19px），并加粗，让其字重与上方的标题呼应 -->
-        <p class="feed-description footer-col-wrapper" style="font-size:  var(--reading-font-size) !important; font-weight: 500 !important; color: #4a4a4a !important;">
-          {{ site.description | escape }}
-        </p>
-
-      </div>
-      <div class="footer-col">
-        {%- if site.author %}
-        <p>{{ site.author | escape }}</p>
-        {%- endif %}
-      </div>
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-quote">
+      三十年河东，三十年河西，莫欺少年穷
     </div>
-
-    <div class="social-links">
-      {%- include social.html -%}
+    <div class="footer-meta">
+      <span>© {{ site.time | date: "%Y" }} {{ site.author | default: site.title }}</span>
     </div>
   </div>
 </footer>

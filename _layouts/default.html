@@ -1,46 +1,73 @@
 <!DOCTYPE html>
-<html lang="{{ page.lang | default: site.lang | default: "en" }}">
+<html lang="zh-CN">
   {%- include head.html -%}
   <body>
     {%- include header.html -%}
-    <div class="reading-container">  
-        {{ content }}
-</div>
+
+    <main class="main-content">
+      {{ content }}
+    </main>
+
     {%- include footer.html -%}
-    <button 
-      type="button" 
-      class="btn-back-to-top position-fixed bottom-0 end-0 m-4 d-none" 
-      id="btn-back-to-top" 
-      style="z-index: 1050; width: 45px; height: 45px; border: none; background-color: #0084FF; color: white; border-radius: 5px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); cursor: pointer;"
-      aria-label="回到顶部">
-      <span style="font-size: 20px; line-height: 1; display: block; transform: translateY(-2px);">↑</span>
+
+    <!-- ⬆️ 回到顶部按钮 -->
+    <button type="button" class="btn-back-to-top" id="btn-back-to-top" aria-label="回到顶部">
+      <span>↑</span>
     </button>
 
+    <!-- 🔧 全局脚本 -->
     <script>
       document.addEventListener("DOMContentLoaded", function () {
-        const backToTopButton = document.getElementById("btn-back-to-top");
-
-        // 滚动超过 300px 显示按钮
+        // ── 回到顶部 ──
+        var btn = document.getElementById("btn-back-to-top");
         window.addEventListener("scroll", function () {
           if (window.scrollY > 300) {
-            backToTopButton.classList.remove("d-none");
+            btn.classList.add("visible");
           } else {
-            backToTopButton.classList.add("d-none");
+            btn.classList.remove("visible");
           }
         });
+        btn.addEventListener("click", function () {
+          window.scrollTo({ top: 0, behavior: "smooth" });
+        });
 
-        // 点击平滑滚动回顶部
-        backToTopButton.addEventListener("click", function () {
-          window.scrollTo({
-            top: 0,
-            behavior: "smooth"
+        // ── 代码块增强：语言标签 + 复制按钮 ──
+        document.querySelectorAll("pre").forEach(function (pre) {
+          if (pre.querySelector(".code-copy-btn")) return;
+
+          var codeEl = pre.querySelector("code");
+          var lang = "code";
+          if (codeEl) {
+            var cls = codeEl.className.match(/language-(\w+)/);
+            if (cls) {
+              lang = cls[1];
+              var map = { py: "Python", js: "JavaScript", ts: "TypeScript", rb: "Ruby",
+                          go: "Go", rs: "Rust", java: "Java", c: "C", cpp: "C++",
+                          sh: "Shell", bash: "Bash", sql: "SQL", html: "HTML",
+                          css: "CSS", json: "JSON", yaml: "YAML", md: "Markdown" };
+              lang = map[lang] || (lang.charAt(0).toUpperCase() + lang.slice(1));
+            }
+          }
+          pre.setAttribute("data-lang", lang);
+
+          var btn2 = document.createElement("button");
+          btn2.type = "button";
+          btn2.className = "code-copy-btn";
+          btn2.textContent = "复制";
+          btn2.addEventListener("click", function () {
+            var text = codeEl ? codeEl.innerText : pre.innerText;
+            navigator.clipboard.writeText(text).then(function () {
+              btn2.textContent = "已复制 ✓";
+              btn2.classList.add("copied");
+              setTimeout(function () {
+                btn2.textContent = "复制";
+                btn2.classList.remove("copied");
+              }, 2000);
+            });
           });
+          pre.appendChild(btn2);
         });
       });
     </script>
-
-    <script src="{{ '/assets/js/custom-formula.js' | relative_url }}"></script>
-
   </body>
-
 </html>
