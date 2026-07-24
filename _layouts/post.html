@@ -3,11 +3,30 @@ layout: default
 ---
 
 <article class="post-article" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <!-- ============================================================
+       📑 左侧目录（可折叠）
+       ============================================================ -->
+  <aside class="toc-sidebar" id="toc-sidebar">
+    <div class="toc-inner">
+      <div class="toc-header">
+        <button class="toc-toggle" id="toc-toggle" aria-label="收起/展开目录" title="收起/展开目录">
+          <span class="toc-toggle-icon" id="toc-toggle-icon">◀</span>
+        </button>
+        <span class="toc-title-text" id="toc-title-text">
+          <span class="toc-icon">▎</span> 目录
+        </span>
+      </div>
+      <nav class="toc-nav" id="toc-nav"></nav>
+    </div>
+  </aside>
+
+  <!-- 文章头部 -->
   <header class="post-header-custom">
     <h1 class="post-title-custom" itemprop="name headline">{{ page.title | escape }}</h1>
     <div class="post-meta-bar">
       <span class="meta-item">
-        📅 <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%Y-%m-%d" }}</time>
+        <i class="icon-calendar"></i> <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%Y-%m-%d" }}</time>
       </span>
       {%- if page.author -%}
         <span class="meta-item">👤 {{ page.author }}</span>
@@ -27,31 +46,123 @@ layout: default
 
   <hr class="post-divider">
 
-  <div class="post-body" itemprop="articleBody">
-    {{ content }}
-  </div>
+  <!-- 正文 -->
+  <div class="post-body-wrapper">
+    <div class="post-body" itemprop="articleBody">
+      {{ content }}
+    </div>
 
-  <hr class="post-divider">
+    <hr class="post-divider">
 
-  <!-- 上一篇 / 下一篇 -->
-  {%- if page.previous or page.next -%}
-    <nav class="post-nav">
-      <div class="post-nav-prev">
-        {%- if page.previous -%}
-          <a href="{{ page.previous.url | relative_url }}" title="{{ page.previous.title }}">
-            <span class="nav-arrow">←</span>
-            <span class="nav-text">{{ page.previous.title | truncate: 24 }}</span>
-          </a>
-        {%- endif -%}
-      </div>
-      <div class="post-nav-next">
-        {%- if page.next -%}
-          <a href="{{ page.next.url | relative_url }}" title="{{ page.next.title }}">
-            <span class="nav-text">{{ page.next.title | truncate: 24 }}</span>
-            <span class="nav-arrow">→</span>
-          </a>
-        {%- endif -%}
-      </div>
-    </nav>
-  {%- endif -%}
+    <!-- 上一篇 / 下一篇 -->
+    {%- if page.previous or page.next -%}
+      <nav class="post-nav">
+        <div class="post-nav-prev">
+          {%- if page.previous -%}
+            <a href="{{ page.previous.url | relative_url }}" title="{{ page.previous.title }}">
+              <span class="nav-arrow">←</span>
+              <span class="nav-text">{{ page.previous.title | truncate: 24 }}</span>
+            </a>
+          {%- endif -%}
+        </div>
+        <div class="post-nav-next">
+          {%- if page.next -%}
+            <a href="{{ page.next.url | relative_url }}" title="{{ page.next.title }}">
+              <span class="nav-text">{{ page.next.title | truncate: 24 }}</span>
+              <span class="nav-arrow">→</span>
+            </a>
+          {%- endif -%}
+        </div>
+      </nav>
+    {%- endif -%}
+  </div><!-- /post-body-wrapper -->
+
 </article>
+
+<!-- 📑 TOC 生成 + 滚动高亮 + 折叠 -->
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  var nav = document.getElementById("toc-nav");
+  var sidebar = document.getElementById("toc-sidebar");
+  var toggleBtn = document.getElementById("toc-toggle");
+  var toggleIcon = document.getElementById("toc-toggle-icon");
+  var titleText = document.getElementById("toc-title-text");
+  if (!nav) return;
+
+  // ---- 1. 扫描标题 ----
+  var headings = document.querySelectorAll(".post-body h2, .post-body h3");
+  if (headings.length < 2) {
+    if (sidebar) sidebar.style.display = "none";
+    return;
+  }
+
+  headings.forEach(function (h, i) {
+    if (!h.id) {
+      h.id = "toc-" + i + "-" + (h.textContent || "").trim().slice(0, 20)
+        .replace(/[^a-z0-9\u4e00-\u9fa5]+/gi, "-").toLowerCase();
+    }
+    var a = document.createElement("a");
+    a.href = "#" + h.id;
+    a.className = "toc-link toc-" + h.tagName.toLowerCase();
+    a.textContent = h.textContent;
+    a.addEventListener("click", function (e) {
+      e.preventDefault();
+      h.scrollIntoView({ behavior: "smooth", block: "start" });
+      nav.querySelectorAll(".toc-link").forEach(function (x) { x.classList.remove("active"); });
+      a.classList.add("active");
+      history.pushState(null, "", "#" + h.id);
+    });
+    nav.appendChild(a);
+  });
+
+  // ---- 2. 滚动高亮 ----
+  var tocItems = Array.from(headings).map(function (h) {
+    return { id: h.id, link: nav.querySelector('a[href="#' + h.id + '"]') };
+  });
+  var tocLinks = nav.querySelectorAll(".toc-link");
+
+  function onScroll() {
+    var scrollPos = window.scrollY + 120;
+    var current = null;
+    tocItems.forEach(function (item) {
+      var el = document.getElementById(item.id);
+      if (el && el.offsetTop <= scrollPos) current = item;
+    });
+    tocLinks.forEach(function (l) { l.classList.remove("active"); });
+    if (current && current.link) current.link.classList.add("active");
+  }
+  window.addEventListener("scroll", onScroll, { passive: true });
+  onScroll();
+
+  // ---- 3. 折叠/展开 ----
+  var COLLAPSED_KEY = "toc-collapsed";
+  var isWide = window.innerWidth >= 1100;
+  var stored = localStorage.getItem(COLLAPSED_KEY);
+  // 窄屏默认收起，宽屏默认展开（除非用户手动设置过）
+  var isCollapsed = stored !== null ? stored === "1" : !isWide;
+
+  function applyState() {
+    if (!sidebar) return;
+    if (isCollapsed) {
+      sidebar.classList.add("collapsed");
+      if (toggleIcon) toggleIcon.textContent = "▶";
+      if (titleText) titleText.style.display = "none";
+    } else {
+      sidebar.classList.remove("collapsed");
+      if (toggleIcon) toggleIcon.textContent = "◀";
+      if (titleText) titleText.style.display = "";
+    }
+    // 切换后通知 Grid 重算
+    window.dispatchEvent(new Event('resize'));
+  }
+
+  if (toggleBtn) {
+    toggleBtn.addEventListener("click", function () {
+      isCollapsed = !isCollapsed;
+      localStorage.setItem(COLLAPSED_KEY, isCollapsed ? "1" : "0");
+      applyState();
+    });
+  }
+  applyState(); // 初始化
+});
+</script>
