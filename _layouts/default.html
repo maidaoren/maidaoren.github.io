@@ -31,7 +31,7 @@
           window.scrollTo({ top: 0, behavior: "smooth" });
         });
 
-        // ── 代码块增强：语言标签 + 复制按钮 ──
+        // ── 代码块增强：语言标签 + 复制按钮（黑客绿主题） ──
         document.querySelectorAll("pre").forEach(function (pre) {
           if (pre.querySelector(".code-copy-btn")) return;
 
@@ -53,14 +53,15 @@
           var btn2 = document.createElement("button");
           btn2.type = "button";
           btn2.className = "code-copy-btn";
-          btn2.textContent = "复制";
+          btn2.textContent = "[ COPY ]";
+          btn2.style.fontFamily = '"JetBrains Mono", "Fira Code", monospace';
           btn2.addEventListener("click", function () {
             var text = codeEl ? codeEl.innerText : pre.innerText;
             navigator.clipboard.writeText(text).then(function () {
-              btn2.textContent = "已复制 ✓";
+              btn2.textContent = "✔ COPIED";
               btn2.classList.add("copied");
               setTimeout(function () {
-                btn2.textContent = "复制";
+                btn2.textContent = "[ COPY ]";
                 btn2.classList.remove("copied");
               }, 2000);
             });

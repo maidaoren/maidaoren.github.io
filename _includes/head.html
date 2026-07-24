@@ -6,10 +6,11 @@
 
   <!-- Bootstrap 5 CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-  <!-- 自定义暖色调样式 -->
+  <!-- 自定义金属性样式 -->
   <link rel="stylesheet" href="{{ "/assets/css/custom-formula.css" | relative_url }}">
-  <!-- Prism 黑客风格代码高亮 -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css">
+
+  <!-- Prism 代码高亮（基础样式，颜色由 custom-formula.css 覆盖为黑客绿） -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css">
 
   <!-- Prism 核心与组件 -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" defer></script>
@@ -32,4 +33,66 @@
   <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 
   {%- feed_meta -%}
+
+  <!-- 覆盖 Prism 默认颜色为黑客绿 -->
+  <style>
+    /* Prism 基础色覆盖 */
+    pre[class*="language-"], code[class*="language-"] {
+      color: #00ff66 !important;
+      background: #0d1117 !important;
+      text-shadow: 0 0 3px rgba(0,255,102,0.3) !important;
+      font-family: "JetBrains Mono", "Fira Code", "SF Mono", Consolas, monospace !important;
+    }
+    /* 关键字 */
+    .token.keyword, .token.atrule, .token.important, .token.builtin {
+      color: #00ff66 !important;
+      text-shadow: 0 0 4px rgba(0,255,102,0.4) !important;
+      font-weight: 600;
+    }
+    /* 字符串 */
+    .token.string, .token.char, .token.attr-value {
+      color: #a8ff60 !important;
+      text-shadow: 0 0 3px rgba(168,255,96,0.25) !important;
+    }
+    /* 注释 */
+    .token.comment, .token.prolog, .token.doctype, .token.cdata {
+      color: #4a7c59 !important;
+      font-style: italic;
+      text-shadow: none !important;
+    }
+    /* 函数名 */
+    .token.function, .token.method {
+      color: #00e5ff !important;
+      text-shadow: 0 0 3px rgba(0,229,255,0.3) !important;
+    }
+    /* 数字 */
+    .token.number, .token.boolean, .token.constant {
+      color: #ffb000 !important;
+      text-shadow: 0 0 3px rgba(255,176,0,0.25) !important;
+    }
+    /* 变量/属性 */
+    .token.variable, .token.property, .token.attr-name {
+      color: #00ff66 !important;
+    }
+    /* 操作符 */
+    .token.operator, .token.punctuation {
+      color: #66ff99 !important;
+    }
+    /* 选中 */
+    pre[class*="language-"]::selection, pre[class*="language-"] *::selection,
+    code[class*="language-"]::selection, code[class*="language-"] *::selection {
+      background: rgba(0,255,102,0.25) !important;
+      color: #ffffff !important;
+      text-shadow: 0 0 6px rgba(0,255,102,0.5) !important;
+    }
+    /* 行内 code 也黑底绿字 */
+    :not(pre) > code[class*="language-"] {
+      background: #0d1117 !important;
+      color: #00ff66 !important;
+      border: 1px solid rgba(0,255,102,0.2);
+      padding: 2px 8px;
+      border-radius: 3px;
+      text-shadow: 0 0 3px rgba(0,255,102,0.25) !important;
+    }
+  </style>
 </head>

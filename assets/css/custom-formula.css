@@ -1,4 +1,3 @@
-
 :root {
   --metal-bg:           #eef1f5;
   --metal-bg-soft:      #e4e8ef;
@@ -10,7 +9,7 @@
   --metal-accent-2:     #00b4d8;
   --metal-accent-3:     #7c3aed;
   --metal-silver:       #94a3b8;
-  --metal-silver-light:  #cbd5e1;
+  --metal-silver-light: #cbd5e1;
   --metal-silver-dark:  #64748b;
   --metal-border:       #d1d9e2;
   --metal-border-strong:#a8b4c0;
@@ -26,15 +25,20 @@
   --metal-footer-bg:     #1a2230;
   --metal-chip-text:    #3a7bd5;
 
-  /* ── 黑客终端（冰蓝青字） ── */
-  --hacker-bg:         #0a0e14;
-  --hacker-bg-elev:    #111822;
-  --hacker-border:     #1a2744;
-  --hacker-cyan:       #00e5ff;
+  /* ── 黑客终端（经典绿字 CRT） ── */
+  --hacker-bg:         #0d1117;
+  --hacker-bg-elev:    #161b22;
+  --hacker-border:     #00ff66;
+  --hacker-green:      #00ff66;
+  --hacker-green-dim:  #00cc52;
+  --hacker-green-glow: rgba(0, 255, 102, 0.4);
+  --hacker-green-faint:rgba(0, 255, 102, 0.08);
+  --hacker-amber:      #ffb000;
+  --hacker-red:        #ff5c5c;
 
-  /* ── 字体 ── */
-  --font-sans: "Noto Sans SC", "WenQuanYi Micro Hei", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-  --font-mono: "JetBrains Mono", "Fira Code", "SF Mono", Consolas, monospace;
+  /* ── 正文选中色（非代码区） ── */
+  --selection-bg-body: #b3d4fc;
+  --selection-text-body:#1a1a1a;
 }
 
 /* =====================================================================
@@ -59,7 +63,47 @@ body {
 a { color: var(--metal-heading); text-decoration: none; transition: color 0.2s, text-shadow 0.2s; }
 a:hover { color: var(--metal-accent); text-shadow: 0 0 8px var(--metal-glow); }
 
-::selection { background: rgba(58, 123, 213, 0.2); color: var(--metal-heading); }
+/* =====================================================================
+   🎯 选中效果（核心修复点）
+   ===================================================================== */
+
+/* 1. 默认选中（正文、标题、列表等）—— 舒适的高亮蓝 */
+::selection {
+  background: var(--selection-bg-body);
+  color: var(--selection-text-body);
+  text-shadow: none;
+}
+
+::-moz-selection {
+  background: var(--selection-bg-body);
+  color: var(--selection-text-body);
+  text-shadow: none;
+}
+
+/* 2. 代码块内的选中 —— 强制黑客绿风格 */
+/* 必须提高优先级，防止被上面的全局规则覆盖 */
+pre::selection,
+pre ::selection,
+.prompt-box::selection,
+.prompt-box ::selection,
+code::selection,
+.highlight ::selection {
+  background: rgba(0, 255, 102, 0.25) !important;
+  color: #ffffff !important;
+  text-shadow: 0 0 6px rgba(0, 255, 102, 0.6) !important;
+}
+
+pre::-moz-selection,
+pre ::-moz-selection,
+.prompt-box::-moz-selection,
+.prompt-box ::-moz-selection,
+code::-moz-selection,
+.highlight ::-moz-selection {
+  background: rgba(0, 255, 102, 0.25) !important;
+  color: #ffffff !important;
+  text-shadow: 0 0 6px rgba(0, 255, 102, 0.6) !important;
+}
+
 
 .site-header {
   position: sticky;
@@ -496,69 +540,87 @@ a:hover { color: var(--metal-accent); text-shadow: 0 0 8px var(--metal-glow); }
 }
 
 /* =====================================================================
-   💻 黑客终端代码块（冰蓝青字 + 深冷底）
+   💻 黑客终端代码块（经典黑底绿字 CRT 风格）
    ===================================================================== */
 pre, .prompt-box {
   font-family: var(--font-mono) !important;
   font-size: 0.87rem !important;
-  line-height: 1.7 !important;
+  line-height: 1.75 !important;
   text-indent: 0 !important;
   background: var(--hacker-bg) !important;
-  border: 1px solid var(--hacker-border) !important;
-  border-left: 4px solid var(--hacker-cyan) !important;
+  border: 1px solid #1a2332 !important;
+  border-left: 4px solid var(--hacker-green) !important;
   border-radius: 6px;
-  padding: 1.6rem 1.2rem 1.2rem 1.2rem !important;
+  padding: 1.8rem 1.2rem 1.2rem 1.2rem !important;
   margin: 1.8rem 0 !important;
-  color: var(--hacker-cyan) !important;
+  color: var(--hacker-green) !important;
   position: relative;
   overflow-x: auto;
-  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(255,255,255,0.03);
+  box-shadow:
+    0 8px 28px rgba(0, 0, 0, 0.5),
+    inset 0 1px 0 rgba(255, 255, 255, 0.02),
+    0 0 0 1px rgba(0, 255, 102, 0.05);
 }
 pre code, .prompt-box code, pre *, .prompt-box * {
-  color: var(--hacker-cyan) !important;
+  color: var(--hacker-green) !important;
   background: transparent !important;
   font-family: inherit !important;
   font-size: inherit !important;
-  text-shadow: 0 0 3px rgba(0, 229, 255, 0.3) !important;
+  text-shadow: 0 0 4px rgba(0, 255, 102, 0.35) !important;
 }
-pre::selection, pre *::selection { background: rgba(0, 229, 255, 0.15) !important; color: var(--hacker-cyan) !important; }
 
-/* 语言标签 */
+/* 语言标签（顶部右侧小标签） */
 pre[data-lang]::before {
-  content: attr(data-lang); display: block; position: absolute; top: 0; right: 70px;
-  padding: 3px 12px; font-size: 0.65rem; font-family: var(--font-mono);
-  color: var(--hacker-cyan); background: var(--hacker-bg-elev);
+  content: attr(data-lang);
+  display: block; position: absolute; top: 0; right: 70px;
+  padding: 3px 12px; font-size: 0.6rem; font-family: var(--font-mono);
+  color: var(--hacker-bg); background: var(--hacker-green);
   border-bottom-left-radius: 4px; border-bottom-right-radius: 4px;
-  border: 1px solid var(--hacker-border); border-top: none;
-  opacity: 0.9; letter-spacing: 0.05em; text-transform: uppercase;
+  opacity: 0.95; letter-spacing: 0.08em; text-transform: uppercase;
+  font-weight: 700;
 }
 
 /* 复制按钮 */
 .code-copy-btn {
   position: absolute; top: 8px; right: 8px; padding: 3px 10px;
-  font-size: 0.65rem; font-family: var(--font-mono); color: var(--hacker-cyan);
-  background: var(--hacker-bg-elev); border: 1px solid var(--hacker-border);
-  border-radius: 3px; cursor: pointer; opacity: 0; transition: opacity 0.2s, box-shadow 0.2s; z-index: 10;
+  font-size: 0.6rem; font-family: var(--font-mono); color: var(--hacker-green);
+  background: var(--hacker-bg-elev); border: 1px solid rgba(0,255,102,0.3);
+  border-radius: 3px; cursor: pointer; opacity: 0;
+  transition: opacity 0.2s, box-shadow 0.2s, background 0.2s; z-index: 10;
+  letter-spacing: 0.05em;
 }
 pre:hover .code-copy-btn { opacity: 1; }
-.code-copy-btn:hover { background: #152238; border-color: var(--hacker-cyan); box-shadow: 0 0 8px rgba(0,229,255,0.3); }
-.code-copy-btn.copied { color: var(--hacker-cyan); border-color: var(--hacker-cyan); opacity: 1; }
+.code-copy-btn:hover {
+  background: rgba(0,255,102,0.12); border-color: var(--hacker-green);
+  box-shadow: 0 0 10px var(--hacker-green-glow);
+}
+.code-copy-btn.copied { color: var(--hacker-green); border-color: var(--hacker-green); opacity: 1; }
 
 /* 终端光标 */
 pre code::after {
   content: "▊"; display: inline-block; margin-left: 2px;
-  animation: blink 1.2s step-end infinite; color: var(--hacker-cyan); opacity: 0.6;
-  text-shadow: 0 0 4px var(--hacker-cyan);
+  animation: blink 1.1s step-end infinite; color: var(--hacker-green); opacity: 0.7;
+  text-shadow: 0 0 5px var(--hacker-green);
 }
 @keyframes blink { 0%, 50% { opacity: 1; } 50.01%, 100% { opacity: 0; } }
 
-/* =====================================================================
-   🏷️ 行内代码
-   ===================================================================== */
+/* 代码行号 */
+pre .lineno {
+  color: rgba(0, 255, 102, 0.3) !important;
+  text-shadow: none !important;
+  padding-right: 0.8rem;
+  border-right: 1px solid rgba(0,255,102,0.15);
+  margin-right: 0.8rem;
+  user-select: none;
+}
+
+/* 行内代码（暗底绿字，微型终端） */
 :not(pre) > code {
   font-family: var(--font-mono) !important; font-size: 0.85em !important;
-  background: #e8edf4 !important; color: var(--metal-accent) !important;
-  padding: 2px 7px !important; border-radius: 3px; border: 1px solid #d5dde8; white-space: nowrap;
+  background: #0d1117 !important; color: var(--hacker-green) !important;
+  padding: 2px 8px !important; border-radius: 3px;
+  border: 1px solid rgba(0,255,102,0.2); white-space: nowrap;
+  text-shadow: 0 0 3px rgba(0,255,102,0.25) !important;
 }
 
 /* =====================================================================
@@ -611,7 +673,6 @@ mjx-container, .MathJax, [data-mml-node], .mjx-container * {
   user-select: none !important;
   -webkit-user-select: none !important;
 }
-
 
 @keyframes metalShimmer {
   0%   { background-position: -200% 0; }
