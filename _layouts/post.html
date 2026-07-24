@@ -9,14 +9,23 @@ layout: default
        ============================================================ -->
   <aside class="toc-sidebar" id="toc-sidebar">
     <div class="toc-inner">
-      <div class="toc-header">
-        <button class="toc-toggle" id="toc-toggle" aria-label="收起/展开目录" title="收起/展开目录">
-          <span class="toc-toggle-icon" id="toc-toggle-icon">◀</span>
+
+      <!-- 展开状态头部 -->
+      <div class="toc-header-expanded" id="toc-header-expanded">
+        <button class="toc-toggle" id="toc-toggle" aria-label="收起目录" title="收起目录">
+          <span class="toc-toggle-icon">◀</span>
         </button>
-        <span class="toc-title-text" id="toc-title-text">
-          <span class="toc-icon">▎</span> 目录
+        <span class="toc-title-text">
+          <span class="toc-icon">☰</span> 目录
         </span>
       </div>
+
+      <!-- 收起状态头部（仅竖排"目录"二字 + 箭头） -->
+      <div class="toc-header-collapsed" id="toc-header-collapsed" title="展开目录">
+        <span class="toc-collapsed-text">目录</span>
+        <span class="toc-collapsed-arrow">▶</span>
+      </div>
+
       <nav class="toc-nav" id="toc-nav"></nav>
     </div>
   </aside>
@@ -85,8 +94,8 @@ document.addEventListener("DOMContentLoaded", function () {
   var nav = document.getElementById("toc-nav");
   var sidebar = document.getElementById("toc-sidebar");
   var toggleBtn = document.getElementById("toc-toggle");
-  var toggleIcon = document.getElementById("toc-toggle-icon");
-  var titleText = document.getElementById("toc-title-text");
+  var headerExpanded = document.getElementById("toc-header-expanded");
+  var headerCollapsed = document.getElementById("toc-header-collapsed");
   if (!nav) return;
 
   // ---- 1. 扫描标题 ----
@@ -138,31 +147,37 @@ document.addEventListener("DOMContentLoaded", function () {
   var COLLAPSED_KEY = "toc-collapsed";
   var isWide = window.innerWidth >= 1100;
   var stored = localStorage.getItem(COLLAPSED_KEY);
-  // 窄屏默认收起，宽屏默认展开（除非用户手动设置过）
   var isCollapsed = stored !== null ? stored === "1" : !isWide;
 
   function applyState() {
     if (!sidebar) return;
     if (isCollapsed) {
       sidebar.classList.add("collapsed");
-      if (toggleIcon) toggleIcon.textContent = "▶";
-      if (titleText) titleText.style.display = "none";
+      if (headerExpanded) headerExpanded.style.display = "none";
+      if (headerCollapsed) headerCollapsed.style.display = "flex";
     } else {
       sidebar.classList.remove("collapsed");
-      if (toggleIcon) toggleIcon.textContent = "◀";
-      if (titleText) titleText.style.display = "";
+      if (headerExpanded) headerExpanded.style.display = "flex";
+      if (headerCollapsed) headerCollapsed.style.display = "none";
     }
-    // 切换后通知 Grid 重算
     window.dispatchEvent(new Event('resize'));
   }
 
-  if (toggleBtn) {
-    toggleBtn.addEventListener("click", function () {
-      isCollapsed = !isCollapsed;
-      localStorage.setItem(COLLAPSED_KEY, isCollapsed ? "1" : "0");
+  // 收起态的竖条本身也可点击展开
+  if (headerCollapsed) {
+    headerCollapsed.addEventListener("click", function () {
+      isCollapsed = false;
+      localStorage.setItem(COLLAPSED_KEY, "0");
       applyState();
     });
   }
-  applyState(); // 初始化
+  if (toggleBtn) {
+    toggleBtn.addEventListener("click", function () {
+      isCollapsed = true;
+      localStorage.setItem(COLLAPSED_KEY, "1");
+      applyState();
+    });
+  }
+  applyState();
 });
 </script>

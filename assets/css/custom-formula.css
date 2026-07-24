@@ -327,7 +327,7 @@ a:hover { color: var(--metal-accent); text-shadow: 0 0 8px var(--metal-glow); }
 .nav-text { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 
 /* =====================================================================
-   📑 目录 TOC — 可折叠左侧面板
+   📑 目录 TOC — 可折叠左侧面板（v5.1 文字+图标方案）
    ===================================================================== */
 
 /* 宽屏：Grid 布局，TOC 在左，正文在右 */
@@ -388,20 +388,20 @@ a:hover { color: var(--metal-accent); text-shadow: 0 0 8px var(--metal-glow); }
   transition: padding 0.3s ease;
 }
 
-/* TOC 头部（标题 + 折叠按钮） */
-.toc-header {
+/* ─── 展开态头部 ─── */
+.toc-header-expanded {
   display: flex;
   align-items: center;
-  gap: 0.4rem;
+  gap: 0.5rem;
   margin-bottom: 0.5rem;
-  padding-bottom: 0.4rem;
+  padding-bottom: 0.5rem;
   border-bottom: 1px solid rgba(58,123,213,0.15);
 }
 .toc-toggle {
-  width: 24px; height: 24px;
+  width: 26px; height: 26px;
   border: 1px solid var(--metal-border);
-  border-radius: 4px;
-  background: rgba(255,255,255,0.7);
+  border-radius: 5px;
+  background: rgba(255,255,255,0.8);
   color: var(--metal-accent);
   font-size: 0.7rem;
   cursor: pointer;
@@ -413,15 +413,50 @@ a:hover { color: var(--metal-accent); text-shadow: 0 0 8px var(--metal-glow); }
   background: var(--metal-accent);
   color: #fff;
   border-color: var(--metal-accent);
-  box-shadow: 0 0 8px var(--metal-glow);
+  box-shadow: 0 0 10px var(--metal-glow);
 }
 .toc-title-text {
-  font-size: 0.9rem; font-weight: 700; color: var(--metal-heading);
-  letter-spacing: 0.03em;
-  display: flex; align-items: center; gap: 0.3rem;
+  font-size: 0.92rem; font-weight: 700; color: var(--metal-heading);
+  letter-spacing: 0.04em;
+  display: flex; align-items: center; gap: 0.35rem;
   white-space: nowrap;
 }
-.toc-icon { color: var(--metal-accent); font-size: 0.9rem; text-shadow: 0 0 6px var(--metal-glow); }
+.toc-icon { color: var(--metal-accent); font-size: 0.95rem; text-shadow: 0 0 6px var(--metal-glow); }
+
+/* ─── 收起态头部（竖排"目录" + 箭头） ─── */
+.toc-header-collapsed {
+  display: none; /* 默认隐藏，折叠时显示 */
+  flex-direction: column;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.4rem 0;
+  cursor: pointer;
+  border-bottom: 1px solid rgba(58,123,213,0.12);
+  margin-bottom: 0.3rem;
+  transition: background 0.2s;
+  border-radius: 4px;
+}
+.toc-header-collapsed:hover {
+  background: rgba(58,123,213,0.06);
+}
+.toc-collapsed-text {
+  writing-mode: vertical-lr;
+  text-orientation: mixed;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--metal-accent);
+  letter-spacing: 0.15em;
+  text-shadow: 0 0 4px var(--metal-glow);
+}
+.toc-collapsed-arrow {
+  font-size: 0.7rem;
+  color: var(--metal-accent);
+  animation: arrowPulse 2s ease-in-out infinite;
+}
+@keyframes arrowPulse {
+  0%, 100% { opacity: 0.5; transform: translateX(0); }
+  50%      { opacity: 1;   transform: translateX(2px); }
+}
 
 /* TOC 导航链接 */
 .toc-nav { display: flex; flex-direction: column; gap: 2px; }
@@ -451,30 +486,16 @@ a:hover { color: var(--metal-accent); text-shadow: 0 0 8px var(--metal-glow); }
 /* =====================================================================
    🔀 折叠状态
    ===================================================================== */
-.toc-sidebar.collapsed .toc-nav,
-.toc-sidebar.collapsed .toc-title-text {
-  display: none;
-}
-.toc-sidebar.collapsed .toc-header {
-  border-bottom: none;
-  margin-bottom: 0;
-  padding-bottom: 0;
-  justify-content: center;
-}
-.toc-sidebar.collapsed .toc-inner {
-  padding: 0.5rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
 .toc-sidebar.collapsed {
-  width: 44px !important;
-  min-width: 44px;
+  width: 48px !important;
+  min-width: 48px;
 }
-.toc-toggle-icon {
-  display: inline-block;
-  transition: transform 0.3s ease;
-  font-size: 0.65rem;
+.toc-sidebar.collapsed .toc-nav { display: none; }
+.toc-sidebar.collapsed .toc-inner {
+  padding: 0.6rem 0.3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 /* 窄屏：默认收起 */
