@@ -1,8 +1,3 @@
-
-[数字利维坦的非线性演化](https://maidaoren.github.io/2026/07/02/The-capriciousness-of-modern-authoritarian-states.html)
-
-[数字利维坦的非线性演化：基于四机制耦合、三状态切换与脆弱性预警的治理模型整合分析](https://maidaoren.github.io/2026/07/02/The-capriciousness-of-modern-authoritarian-states.html)
-
 # 作者：朱宏君
 
 ---
