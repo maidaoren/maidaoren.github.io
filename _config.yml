@@ -33,7 +33,7 @@ kramdown:
   input: GFM
   # 🎯 锁定直引号，禁用智能引号转换
   smart_quotes: quot,quot,quot,quot
-  math_engine: null
+  math_engine: mathjax
 
 mathjax: true
 

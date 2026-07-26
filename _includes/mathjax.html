@@ -1,28 +1,108 @@
-<script>
-  window.MathJax = {
-    tex: { inlineMath: [['$', '$']], displayMath: [['$$', '$$']] }
-  };
-</script>
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>MathJax 3 完美渲染与双击复制源码示例</title>
 
-<script>
-  // 监听双击事件，谁双击公式就直接把公式源码弹出来供复制
-  document.addEventListener('dblclick', function(e) {
-    const container = e.target.closest('mjx-container');
-    if (container) {
-      // 拿到隐藏在里面的原始 TeX 字符串
-      const scriptNode = container.previousSibling || container.parentNode.querySelector('script[type^="math/tex"]');
-      const texCode = container.getAttribute('annotation') || (scriptNode ? scriptNode.textContent : '');
-      
-      if (texCode || container.innerText) {
-        // 如果实在找不到属性，就提取纯文本，或者直接弹出提示
-        const finalTex = texCode ? texCode : container.innerText;
-        navigator.clipboard.writeText(finalTex).then(() => {
-          alert('公式源码已成功复制到剪贴板！\n' + finalTex);
-        }).catch(() => {
-          prompt('请复制下框中的公式源码：', finalTex);
-        });
+  <!-- 1. MathJax 配置 (必须放在加载脚本之前) -->
+  <script>
+    window.MathJax = {
+      tex: {
+        // 允许使用 $...$ 或 \(...\) 渲染行内公式，$$...$$ 或 \[...\] 渲染行间公式
+        inlineMath: [['$', '$'], ['\\(', '\\)']],
+        displayMath: [['$$', '$$'], ['\\[', '\\]']],
+        // 必须开启转义，允许你写 \$ 来表达普通美元符号，避免误吞中文
+        processEscapes: true,
+        processEnvironments: true
+      },
+      options: {
+        // 确保不会跳过正常 DOM 的渲染
+        skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
       }
+    };
+  </script>
+
+  <!-- 2. 加载 MathJax 3 核心 CDN 脚本 -->
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+  <!-- 3. CSS 样式：优化公式悬停体验 -->
+  <style>
+    /* 给公式增加手型光标与高亮提示，让用户知道可交互 */
+    mjx-container { 
+      cursor: pointer; 
+      transition: background-color 0.2s ease, box-shadow 0.2s ease;
+      padding: 0 2px;
+      border-radius: 3px;
     }
-  });
-</script>
-<style> mjx-container { cursor: pointer; } </style>
+    mjx-container:hover {
+      background-color: rgba(0, 132, 255, 0.12);
+      box-shadow: 0 0 0 2px rgba(0, 132, 255, 0.2);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- 测试文本区域 -->
+  <div style="max-width: 800px; margin: 40px auto; line-height: 1.8; font-size: 16px;">
+    <h2>测试段落</h2>
+    
+    <p>
+      的测量情境不同，故不适用同一原则。这一文本分析路径与既有指标 IV "跨平台报论体系内部的例外。
+    </p>
+
+    <!-- 行内公式与中文混排测试 -->
+    <p>
+      $R_{real}(t)$ 一侧：不采用与 $\hat{R}_{fake}(t)$ 对称的文本分析方法。原因是 $R_{real}(t)$ 的测量困难，其它性质与 $\hat{R}_{fake}(t)$ 完全不同——不是受访者的策略性隐藏，而是供给端本身因第一部分 1.3 节...
+    </p>
+
+    <!-- 行间块级公式测试 -->
+    <p>以下是独立行间公式，双击也可复制：</p>
+    $$E = mc^2$$
+  </div>
+
+  <!-- 4. 双击提取 TeX 源码脚本 -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      // 全局监听双击事件
+      document.addEventListener('dblclick', function(e) {
+        // 匹配点击的渲染公式节点
+        const container = e.target.closest('mjx-container');
+        if (!container) return;
+
+        let texCode = "";
+
+        // 【核心逻辑】从 MathJax 3 的 DOM 内部绑定数据中安全提取 TeX 源码
+        if (container.math) {
+          texCode = container.math.math;
+        } else if (window.MathJax && MathJax.startup) {
+          // 兜底方案：通过 MathJax API 全局检索节点
+          const mathItems = MathJax.startup.document.getMathItemsWithin(document);
+          for (let item of mathItems) {
+            if (item.typesetRoot === container) {
+              texCode = item.math;
+              break;
+            }
+          }
+        }
+
+        if (texCode) {
+          // 判断是行间公式 (Display) 还是行内公式 (Inline)
+          const isDisplay = container.getAttribute('display') === 'true';
+          const formattedTex = isDisplay ? `$$${texCode}$$` : `$${texCode}$`;
+
+          // 写入系统剪贴板
+          navigator.clipboard.writeText(formattedTex).then(() => {
+            alert('✓ 公式源码已复制到剪贴板：\n\n' + formattedTex);
+          }).catch(err => {
+            // 如果浏览器拦截了剪贴板权限，弹出 prompt 供手动复制
+            prompt('请手动复制下框中的公式源码：', formattedTex);
+          });
+        } else {
+          alert('未找到该公式的 TeX 源码。');
+        }
+      });
+    });
+  </script>
+
+</body>
+</html>
