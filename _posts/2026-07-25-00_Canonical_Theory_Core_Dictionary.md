@@ -2,6 +2,8 @@
 layout: post
 title: '字典'
 date: 2026-07-25
+sticky: true
+sticky_order: 3
 ---
 
 # Canonical Theory Ontology Registry (OR-001)
