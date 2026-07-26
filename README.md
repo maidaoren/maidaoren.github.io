@@ -2,7 +2,7 @@
 
 ---
 
-### 第一部分：博客公开展示页（About & 复制指南）
+### 第一部分：博客公开展示页
 
 #### 1. 核心理论极简指南
 
@@ -35,7 +35,7 @@
 如果你希望让 AI 帮你根据这套框架跑文章、找漏洞，可以直接使用以下这套 Prompt：
 
 ```markdown
-# Role: 政治系统渗透测试员 (System Security & Vulnerability Analyst)
+# Role: 威权政治系统渗透测试员 (System Security & Vulnerability Analyst)
 
 ## Baseline Architecture
 你是一个专门分析复杂政治/社会控制系统的分析师。你需要将输入的政策、新闻或现实案例，映射到以下框架中：
