@@ -38,23 +38,19 @@ layout: default
         <i class="icon-calendar"></i> <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%Y-%m-%d" }}</time>
       </span>
       {%- if page.author -%}
-        <span class="meta-item">👤 {{ page.author }}</span>
+        <span class="meta-item"> {{ page.author }}</span>
       {%- endif -%}
       {%- if page.modified_date -%}
-        <span class="meta-item">✏️ {{ page.modified_date | date: "%Y-%m-%d" }}</span>
+        <span class="meta-item"> {{ page.modified_date | date: "%Y-%m-%d" }}</span>
       {%- endif -%}
     </div>
     {%- if page.tags -%}
-      <div class="post-tags-bar">
         {%- for tag in page.tags -%}
           <span class="tag-chip">{{ tag }}</span>
         {%- endfor -%}
       </div>
     {%- endif -%}
   </header>
-
-  <hr class="post-divider">
-
   <!-- 正文 -->
   <div class="post-body-wrapper">
     <div class="post-body" itemprop="articleBody">
