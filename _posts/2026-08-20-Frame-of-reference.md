@@ -1,7 +1,7 @@
 ---
 layout: post
 title: '参照系：政治比较、现实解构与未来的政治主体性'
-date: 2026-08-13
+date: 2026-08-20
 ---
 
   <strong>核心理论命题：</strong><br>
