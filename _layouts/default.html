@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  {%- include head.html -%}
+  <body>
+    {%- include header.html -%}
+
+    <main class="main-content">
+      {{ content }}
+    </main>
+
+    {%- include footer.html -%}
+
+    <!-- ⬆️ 回到顶部按钮 -->
+    <button type="button" class="btn-back-to-top" id="btn-back-to-top" aria-label="回到顶部">
+      <span>↑</span>
+    </button>
+
+    <!-- 🔧 全局脚本 -->
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        // ── 回到顶部 ──
+        var btn = document.getElementById("btn-back-to-top");
+        window.addEventListener("scroll", function () {
+          if (window.scrollY > 300) {
+            btn.classList.add("visible");
+          } else {
+            btn.classList.remove("visible");
+          }
+        });
+        btn.addEventListener("click", function () {
+          window.scrollTo({ top: 0, behavior: "smooth" });
+        });
+
+        // ── 代码块增强：语言标签 + 复制按钮（黑客绿主题） ──
+        document.querySelectorAll("pre").forEach(function (pre) {
+          if (pre.querySelector(".code-copy-btn")) return;
+
+          var codeEl = pre.querySelector("code");
+          var lang = "code";
+          if (codeEl) {
+            var cls = codeEl.className.match(/language-(\w+)/);
+            if (cls) {
+              lang = cls[1];
+              var map = { py: "Python", js: "JavaScript", ts: "TypeScript", rb: "Ruby",
+                          go: "Go", rs: "Rust", java: "Java", c: "C", cpp: "C++",
+                          sh: "Shell", bash: "Bash", sql: "SQL", html: "HTML",
+                          css: "CSS", json: "JSON", yaml: "YAML", md: "Markdown" };
+              lang = map[lang] || (lang.charAt(0).toUpperCase() + lang.slice(1));
+            }
+          }
+          pre.setAttribute("data-lang", lang);
+
+          var btn2 = document.createElement("button");
+          btn2.type = "button";
+          btn2.className = "code-copy-btn";
+          btn2.textContent = "[ COPY ]";
+          btn2.style.fontFamily = '"JetBrains Mono", "Fira Code", monospace';
+          btn2.addEventListener("click", function () {
+            var text = codeEl ? codeEl.innerText : pre.innerText;
+            navigator.clipboard.writeText(text).then(function () {
+              btn2.textContent = "✔ COPIED";
+              btn2.classList.add("copied");
+              setTimeout(function () {
+                btn2.textContent = "[ COPY ]";
+                btn2.classList.remove("copied");
+              }, 2000);
+            });
+          });
+          pre.appendChild(btn2);
+        });
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,16 @@
+/* 针对 MathJax 3.x 块级公式容器 */
+.MathJax_Display, mjx-container[jax="CHTML"][display="true"] {
+  max-width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding: 0.5em 0;
+}
+
+/* 针对 KaTeX 块级公式 */
+.katex-display {
+  max-width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding: 0.5em 0;
+}
+

@@ -1,0 +1,74 @@
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  {%- seo -%}
+
+  <!-- Bootstrap 5 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- 自定义金属主题 + 黑客代码块 -->
+  <link rel="stylesheet" href="{{ '/assets/css/custom-formula.css' | relative_url }}">
+  <link rel="stylesheet" href="{{ '/assets/css/a.css' | relative_url }}">
+
+
+  <!-- Prism（可选，不影响 Rouge，但保留备用） -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css">
+  <link href="/assets/img/b.jpg" rel="icon" type="image/x-icon">
+
+  <!-- MathJax v3 + 公式拷贝 -->
+  <script>
+    window.MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']],
+        displayMath: [['$$', '$$'], ['\\[', '\\]']]
+      },
+      options: {
+        skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+        ignoreHtmlClass: 'no-mathjax'
+      },
+      startup: {
+        ready: () => {
+          MathJax.startup.defaultReady();
+          MathJax.startup.promise.then(() => {
+            injectHiddenTexSources();
+            bindMathClickCopy();
+          });
+        }
+      }
+    };
+  </script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+  <!-- Prism Core（defer，不阻塞） -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-python.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-bash.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-javascript.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-rust.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-go.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-sql.min.js" defer></script>
+
+  <!-- ✅ 代码块复制按钮（JS，不是 CSS！） -->
+  <script src="{{ '/assets/js/copy-code.js' | relative_url }}"></script>
+
+  <!-- ✅ 公式拷贝逻辑 -->
+  <script src="{{ '/assets/js/math-copy.js' | relative_url }}"></script>
+
+  {%- feed_meta -%}
+
+  <!-- 覆盖 Prism 颜色（仅当你真的用 ```python 时生效） -->
+  <style>
+    pre[class*="language-"], code[class*="language-"] {
+      color: #00ff66 !important;
+      background: #0d1117 !important;
+      text-shadow: 0 0 3px rgba(0,255,102,0.3) !important;
+      font-family: "JetBrains Mono", "Fira Code", monospace !important;
+    }
+    .token.keyword { color: #00ff66 !important; font-weight: 600; }
+    .token.string { color: #a8ff60 !important; }
+    .token.comment { color: #4a7c59 !important; font-style: italic; }
+    .token.function { color: #00e5ff !important; }
+    .token.number { color: #ffb000 !important; }
+  </style>
+</head>
