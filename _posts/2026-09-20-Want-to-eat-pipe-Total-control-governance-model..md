@@ -1,7 +1,7 @@
 ---
 layout: post
 title: '想吃管：全控型治理模型'
-date: 2026-11-05
+date: 2026-09-20
 sticky: true
 sticky_order: 1
 ---
