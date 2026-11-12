@@ -6,11 +6,101 @@ permalink: /about/
 
 ---
 
-卖刀村村霸被关神经病医院六十天。
+卖刀村村霸。
 
-建立组织，公民街头政治运动需要横向连接
+战歌《我不是良民》
 
-互联网时代，我们通过诉苦被共匪及其家属如何迫害，讲自己真实想法，对历史的看法，对共匪作恶多端犯罪历史的看法，对俄国侵占领土一百多万甚至两百多万平方公里的领土看法。在音讯空间，直播间，视频直播间通过上麦说话，
+---
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css">
+<script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script>
+
+<!-- 放置播放器的容器 -->
+<div id="player">ww</div>
+
+<script>
+  const ap = new APlayer({
+      element: document.getElementById('player'),
+      loop: 'all', // 循环模式
+      audio: [{
+          name: '我不是良民',
+          artist: '卖刀人',
+          url: '/assets/mp3/fuckccp.mp3',
+          cover: '/assets/img/b.jpg'
+      }]
+  });
+</script>
+
+---
+
+[Intro, stomp and clap, no vocals]
+
+[Verse, restrained male vocal, acoustic guitar, stomp and clap]
+
+人前点头，夜里难眠，
+
+嘴上说好，心里不甘。
+
+他们说：听话，才有平安，
+
+他们说：听话，才叫良民。
+
+[Chorus, full band, lead vocal, crowd joins on the third line, march rhythm]
+
+我不是良民！
+
+我不是良民！
+
+不再点头，不再沉默，不再假装！
+
+真话，要在白天讲！
+
+[Chorus, call and response, lead then crowd]
+
+我不是良民！(我也不是！)
+
+我不是良民！(我也不是！)
+
+不再点头，不再沉默，不再假装！
+
+真话，要在白天讲！
+
+[Interlude, sudden stop, old gramophone crackle, archival male voice, calm and distant]
+
+清帝退位诏书，一九一二年。
+
+予亦何忍因一姓之尊荣，拂兆民之好恶。
+
+将统治权公诸全国，定为共和立宪国体。
+
+[Spoken word, low and firm, one slow drum beat]
+
+一百多年前，皇帝的诏书就认了：一姓，不能高于兆民。
+
+我们不要新的主人，
+
+只要这张欠条，兑现。
+
+[Final Chorus, everyone in unison, biggest sound, march rhythm]
+
+我们不是良民！
+
+我们不是良民！
+
+一姓不能高于兆民，
+
+这张欠条，该兑现了！
+
+我们不是良民！
+
+[End]
+
+anthemic folk-rock march, mass singalong, Mandarin Chinese, 4/4 at 108 BPM, stomp and clap, acoustic guitar, steady drums, simple memorable melody, strong male lead with big natural crowd unison vocals, dark and defiant, short and direct
+Exclude styles: growl, screaming, rap, EDM, dance beat, cheerful pop, orchestral
+
+---
+
+互联网时代，我们通过诉苦被共匪及其家属如何迫害，讲自己真实想法，对历史的看法，对共匪作恶多端犯罪历史的看法，对俄国侵占领土一百多万甚至两百多万平方公里的领土看法。在音讯空间，直播间，视频直播间通过上麦说话，视频，文章，推文等评论可为横向确认。横向确认的目的是我这样想说出来，让你知道我也这样想。
 
 ---
 
@@ -42,47 +132,6 @@ permalink: /about/
 
 我的作用，是为专家学者、国际社会以及每一个关心中国命运的普通人，提供一套去情绪化、去神秘化的‘中层结构分析工具’。
 它不仅能让学术界与决策者看清中共政权的控盘逻辑、韧性边界与终极死穴，更好地与China及中共打交道；更能帮助普通大众摆脱认知操纵与精神困境，理清统治结构与社会文化的关系，为理解China的过去、现在与未来演化提供客观的逻辑基石。
-
----
-
-战歌《我不是良民》
-
----
-
-[Intro, stomp and clap, no vocals]
-[Verse, restrained male vocal, acoustic guitar, stomp and clap]
-人前点头，夜里难眠，
-嘴上说好，心里不甘。
-他们说：听话，才有平安，
-他们说：听话，才叫良民。
-[Chorus, full band, lead vocal, crowd joins on the third line, march rhythm]
-我不是良民！
-我不是良民！
-不再点头，不再沉默，不再假装！
-真话，要在白天讲！
-[Chorus, call and response, lead then crowd]
-我不是良民！(我也不是！)
-我不是良民！(我也不是！)
-不再点头，不再沉默，不再假装！
-真话，要在白天讲！
-[Interlude, sudden stop, old gramophone crackle, archival male voice, calm and distant]
-清帝退位诏书，一九一二年。
-予亦何忍因一姓之尊荣，拂兆民之好恶。
-将统治权公诸全国，定为共和立宪国体。
-[Spoken word, low and firm, one slow drum beat]
-一百多年前，皇帝的诏书就认了：一姓，不能高于兆民。
-我们不要新的主人，
-只要这张欠条，兑现。
-[Final Chorus, everyone in unison, biggest sound, march rhythm]
-我们不是良民！
-我们不是良民！
-一姓不能高于兆民，
-这张欠条，该兑现了！
-我们不是良民！
-[End]
-
-anthemic folk-rock march, mass singalong, Mandarin Chinese, 4/4 at 108 BPM, stomp and clap, acoustic guitar, steady drums, simple memorable melody, strong male lead with big natural crowd unison vocals, dark and defiant, short and direct
-Exclude styles: growl, screaming, rap, EDM, dance beat, cheerful pop, orchestral
 
 ---
 
