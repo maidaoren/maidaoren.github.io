@@ -16,7 +16,8 @@ permalink: /about/
 <script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script>
 
 <!-- 放置播放器的容器 -->
-<div id="player">ww</div>
+<div id="player">播放器</div>
+
 
 <script>
   const ap = new APlayer({
@@ -122,8 +123,6 @@ Exclude styles: growl, screaming, rap, EDM, dance beat, cheerful pop, orchestral
 
 《想吃管全控治理》模型从2026年6月初期开始创作，早期想做成一个可对话小型demo版本的模型，后来灵机一动，中国的社会全控治理模型三大运行机制完全可以浓缩成为想吃管。想就是与大脑有关，吃与个人和家庭的生存与发展有关，而管表面上看是社会原子化，单位进党支部。事实上管就是通过社会单位化，家庭社会化，强制力机构公检法军警特以及监狱对社会成员进行有效威慑和制造恐惧，而又强化社会成员的偏好伪装，最终让大众认知到反抗的人都很惨，而且还没用。
 
-本模型
-
 模型依旧在持续迭代和优化中。希望更多人参与进来，用模型思考苏联体制国家的社会运转，用模型跟苏联体制国家打交道，用你们所认知到的，所在领域的资源，理论对模型进一步优化。优化之后的模型不必提我的名字或我的模型，完全可以自己命名，公开发表或私藏或小范围传播皆不需要我的同意。
 
 我已将生死置之度外，这是中层分析工具，而不是行动宣言，也不是组织方案，更不是谣言或煽动理论。中共不喜欢人们认清他，想吃管全控治理模型让人们认清中共。中共最恐惧的是有人把中国人组织起来，推翻他们的政权，清算他们的过往。而我过去，现在，未来都不会做这件事情。做不会成事，且立即被消失，我知道，他们也清楚。只要不提到我真实姓名，网名，我就是安全的。也不必执着于我的版权，所有理论都是公开的，现有的，而且是广为人知的理论，我只是利用自己思维能力逆向了苏联体制如何运作的，并且提炼出三大运行机制。
@@ -132,6 +131,8 @@ Exclude styles: growl, screaming, rap, EDM, dance beat, cheerful pop, orchestral
 
 我的作用，是为专家学者、国际社会以及每一个关心中国命运的普通人，提供一套去情绪化、去神秘化的‘中层结构分析工具’。
 它不仅能让学术界与决策者看清中共政权的控盘逻辑、韧性边界与终极死穴，更好地与China及中共打交道；更能帮助普通大众摆脱认知操纵与精神困境，理清统治结构与社会文化的关系，为理解China的过去、现在与未来演化提供客观的逻辑基石。
+
+卖刀人创作所有内容皆不要版权，任何人都可进行二次创作，传播亦不需本人许可，请不要提到我的真实姓名或网名。
 
 ---
 
@@ -385,3 +386,364 @@ Exclude styles: growl, screaming, rap, EDM, dance beat, cheerful pop, orchestral
 我只想堂堂正正地活着……
 
 [Fade Out]
+
+---
+
+正文适配歌曲
+
+《我不是良民》
+
+**风格：重金属抗争 / 进行曲节奏 / 男声主唱 / 多人合唱**
+
+---
+
+[Intro]
+
+[Instrumental Only]
+
+[Heavy stomp and clap]
+
+[Marching snare]
+
+[Low distorted guitar slowly building]
+
+[No vocals]
+
+[Verse 1｜沉默的生活]
+
+[Restrained male vocal, deep and firm]
+
+[Acoustic guitar, stomp and clap, gradually building intensity]
+
+邻居们，同事们，朋友们，抬起头来，
+
+你看，千家万户的饭桌上，人人压低了声腔。
+
+你听，同一句「挺好的」，你说过，我也说过，
+
+整齐得像排练过一样。
+
+我们沉默，不是不会想，
+
+是替自己算过了账。
+
+我们伪装，不是看不清，
+
+是替一家老小守着安康。
+
+[Pre-Chorus｜沉默的代价]
+
+[Sudden drop in instrumentation]
+
+[Low spoken male voice, one slow drum beat]
+
+是让话烂在肚里，
+
+还是让它在彼此的耳中回响？
+
+我们不愿拿一生的假装，
+
+换一世的安详。
+
+更不愿日子久了，
+
+真活成「从没想过」的模样！
+
+[Chorus 1｜个人发声]
+
+[Full heavy metal band enters]
+
+[Powerful clear male lead vocal]
+
+[Massive drums, distorted guitars, marching rhythm]
+
+[Choir answers the lead]
+
+我不是良民！（我也不是！）
+
+我不是良民！（我也不是！）
+
+不再沉默！不再伪装！
+
+把心里的话，放到阳光下讲！
+
+听！千万个声音正在汇聚，
+
+冲破那堵无形的高墙！
+
+让沉默已久的声音，
+
+汇成冲天的巨浪！
+
+[Verse 2｜资源与隔绝]
+
+[Stronger male vocal]
+
+[Electric guitars, steady marching rhythm]
+
+[Bass and drums intensify]
+
+有人教我们怎样想，
+
+有人分我们一碗饭，
+
+有人把我们隔开，
+
+各关进各自的一间房。
+
+尺子握在别人手上，
+
+只许比从前的饥荒，
+
+只许看别处的动荡，
+
+不许问问脚下的土壤。
+
+编制、住房、孩子的学堂，
+
+一键清零，清掉半生的奔忙。
+
+群聊里能说天气、工作、家常，
+
+一句越了界，封群、封号，
+
+群主还要替大家扛。
+
+一个人被带走，
+
+一百个人学会了看风向。
+
+千万只耳朵，
+
+竖成了一道无形的墙。
+
+[Verse 3｜从个例到共同的伤口]
+
+[More aggressive male vocal]
+
+[Heavier guitar riffs, forceful drums]
+
+「经是好经，只是念歪了」，
+
+我们曾这样相信。
+
+可和尚换了一茬又一茬，
+
+念出来的，还是同一个腔。
+
+一处说是个例，
+
+处处就不能再当作偶然。
+
+同一道伤口，
+
+该问问是谁立下的规章！
+
+[Chorus 2｜彼此确认]
+
+[Full band, stronger choir than first chorus]
+
+[Lead vocal and crowd response]
+
+我不是良民！（我也不是！）
+
+我不是良民！（我也不是！）
+
+不再沉默！不再伪装！
+
+把心里的话，放到阳光下讲！
+
+你听见了吗？
+
+那不是一个人在呐喊！
+
+曾经彼此隔绝的声音，
+
+如今正在互相回答！
+
+[Verse 4｜松开手，握住彼此]
+
+[Driving heavy metal guitar]
+
+[Marching snare, rising crowd energy]
+
+向上攀，一级攀着一级，
+
+向身旁踩，一脚踩着一脚。
+
+攀得再高，踩得再狠，
+
+我们仍在这张网上！
+
+松开手，收回脚，
+
+别再把身旁的人推向墙角。
+
+去握住那只，
+
+同样发凉的手掌。
+
+[Verse 5｜良民的真正含义]
+
+[Dramatic low male vocal]
+
+[Ominous guitar, deliberate marching beat]
+
+当年岗哨前，
+
+要出示良民证，
+
+腰要先弯下，不敢抬头张望。
+
+如今不必鞠躬，
+
+点个头，说声「好」，就算顺当。
+
+原来那个「良」字，
+
+夸的是不出声的人。
+
+[Interlude｜清帝退位诏书]
+
+[Sudden stop]
+
+[Old gramophone crackle]
+
+[Archival male voice, calm and distant]
+
+[Historical recording atmosphere]
+
+清帝退位诏书，一九一二年。
+
+人心所向，天命可知，
+
+予亦何忍因一姓之尊荣，
+
+拂兆民之好恶。
+
+特率皇帝将统治权公诸全国，
+
+定为共和立宪国体。
+
+[Spoken Word｜新的主人]
+
+[Low and firm male voice]
+
+[Minimal instrumentation, one slow drum beat]
+
+[Solemn and resolute]
+
+一百多年前，
+
+皇帝的诏书就认了：
+
+一姓，不能高于兆民。
+
+可人心若无人敢说，
+
+天命，又该向谁去打听？
+
+我们不要新的主人——
+
+[Build-up｜认出彼此]
+
+[Drums gradually accelerating]
+
+[Distorted guitars rising]
+
+[Male vocal becoming passionate]
+
+[Additional crowd voices gradually joining]
+
+当饭碗见了底，
+
+欠薪的、断保的、
+
+守着烂尾楼的，
+
+在同一条队伍里，
+
+认出了彼此的脸庞。
+
+你说半句，我接半句，
+
+原来我们想的一样！
+
+今天，我们还是一个个落单的肩膀，
+
+明天，要并成一排，
+
+托起一片天光！
+
+[Drums accelerate]
+
+[Full choir joins]
+
+你不是一个人！
+
+我也不是一个人！
+
+[Final Chorus｜共同宣告]
+
+[Entire band at maximum intensity]
+[Biggest sound]
+
+[Powerful male lead and massive crowd choir]
+
+[Heavy marching rhythm]
+
+[Wide layered guitars and backing vocals]
+
+我不是良民！（我也不是！）
+
+我不是良民！（我也不是！）
+
+我们不是良民！
+
+我们不愿再沉默！
+
+我们不要新的主人！
+
+我们要自己的尊严！
+
+欠下的账，还上！
+
+失去的权利，拿回来！
+
+我们不是良民！（我们不是！）
+
+我们不是良民！（我们不是！）
+
+[Outro｜群体的声音]
+
+[Band gradually drops out]
+
+[Only stomps, claps and crowd voices remain]
+
+[Multiple voices, overlapping, growing into a unified chorus]
+
+我也不是！
+
+我也不是！
+
+我也不是！
+
+[Lead vocal, joined by full choir]
+
+我有名字！
+
+我有声音！
+
+[Full choir, one final collective declaration]
+
+我们不是良民！
+
+[Final distorted guitar chord]
+
+[Sudden stop]
+
+[End]
+
+创作风格：
+
+Heavy Metal Protest Anthem, Cinematic Heavy Rock, Powerful Marching Rhythm, Deep and Clear Male Lead Vocal, Aggressive Emotional Vocal Delivery, Massive Crowd Choir, Call and Response Chorus, Distorted Electric Guitars, Thunderous Drums, Stomp and Clap, Dark Dramatic Intro, Gradual Musical Build-up, Explosive Anthemic Final Chorus, Historical Gramophone Recording Interlude, Spoken Word, Rebellious, Defiant, Epic, Raw Human Emotion, Live Stadium Atmosphere.
