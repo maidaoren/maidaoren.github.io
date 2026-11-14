@@ -138,259 +138,6 @@ Exclude styles: growl, screaming, rap, EDM, dance beat, cheerful pop, orchestral
 
 ---
 
-下面是老版本
-[Intro]
-
-[Guitar Feedback]
-
-[Heavy Drums]
-
-[Whisper Background]
-
-不是良民……
-
-不是良民……
-
-[Verse 1]
-
-那枚冰冷的红印，重重落在户口簿上
-
-一纸写下我的命运，也斩断我的希望
-
-我望着斑驳的旧城墙，撞进冰冷的绞肉机
-
-城门就在眼前，却没有我的归处
-
-梦被关进了档案，青春被锁进了囚笼
-
-我问这是谁的天下，为什么无处安放
-
-如果沉默换不来安稳，如果下跪换不来幸福
-
-那我为何还要沉默？为何还要屈服？
-
-[Pre-Chorus]
-
-我不愿再伪装！
-
-黑夜吞没了大地，看不见一点星光
-
-铁链锁住我的脚步，锁不住胸口的滚烫
-
-我踏过满地废墟，任凭风暴在耳边回响
-
-重建我们的城邦，就在天明！
-
-[Chorus]
-
-[Solo]
-
-我不是良民！我偏要抗争！
-
-哪怕遍体鳞伤，也不再低下头颅！
-
-[Full Band]
-
-[Choir]
-
-我不是良民！我绝不认命！
-
-哪怕整个世界，都要我保持沉默！
-
-[Solo]
-
-我不是良民！
-
-我不是良民！
-
-[Choir]
-
-这一次，我要为自己活！
-
-[Verse 2]
-
-他们给我贴上罪名，说我是危险的人
-
-他们把谎言写成真理，还要我感恩
-
-他们说忍耐就是美德，下跪才有安稳
-
-可谁来回答，那些被夺走的人生？
-
-为了一份工作，我把真话咽进喉咙
-
-为了一家人的明天，我学会低头忍痛
-
-房贷压在肩膀，孩子的未来握在别人手中
-
-父母等着看病，我却不敢说出心中的苦衷
-
-一张档案决定去留，一道门槛挡住前程
-
-我不是没有愤怒，只是不敢拿家人赌明天
-
-可我也有自己的名字，也有不肯交出的尊严
-
-这团火藏在我心底，从来不曾熄灭！
-
-[Pre-Chorus 2]
-
-高墙筑起来了，把所有的光挡在外头
-
-暴雨打在身上，却浇不灭胸口的火
-
-多少人低下了头，多少声音消失在人间
-
-我们隔着一扇门，却不知道谁也在承受
-
-谁敢先说出真话？谁敢先伸出双手？
-
-每个人都在等待，每个人都害怕看透
-
-可我还站在这里——
-
-我还没有认输！
-
-[Chorus]
-
-[Solo]
-
-我不是良民！我偏要抗争！
-
-哪怕遍体鳞伤，也不再低下头颅！
-
-[Choir]
-
-我不是良民！我绝不认命！
-
-哪怕整个世界，都要我保持沉默！
-
-我不是良民！
-
-我不是良民！
-
-这一次，我要为自己活！
-
-[Bridge]
-
-[Minimal Instrumentation]
-
-[Bass and Drums]
-
-来吧！来吧！
-
-把所有的恐惧都带走！
-
-听吧！听吧！
-
-那些沉默的人还没有走！
-
-[Build Up]
-
-如果尊严也要被审判！
-
-如果自由也要付出代价！
-
-那就让这声音穿过黑夜！
-
-让每一个沉默的人听见！
-
-如果你也曾经独自承受！
-
-如果你也曾经无处诉说！
-
-请抬起头，听见我的声音！
-
-你不是一个人，不是一个人！
-
-[Scream]
-
-老子不跪！
-
-老子不躲！
-
-老子就是不做良民！
-
-[Breakdown]
-
-[Call and Response]
-
-(Lead Voice) 我不是！
-
-(Choir) 良民！
-
-(Lead Voice) 我不跪！
-
-(Choir) 不低头！
-
-(Lead Voice) 我不认命！
-
-(Choir) 不认命！
-
-(Lead Voice) 你听见了吗？
-
-(Choir) 我们听见了！
-
-(Lead Voice) 你还沉默吗？
-
-(Choir) 不再沉默！
-
-[All]
-
-全体：我不是良民！！！
-
-[Final Chorus]
-
-[Explosive Chorus]
-
-[Full Choir]
-
-我不是良民！我偏要抗争！
-
-哪怕遍体鳞伤，也不肯低下头颅！
-
-我不是良民！我绝不认命！
-
-让自由的呼声，穿透每一座高墙！
-
-我不是良民！我不再沉默！
-
-曾经孤独的声音，如今汇成同一首歌！
-
-我不是良民！我绝不认命！
-
-我要亲眼看见，尊严重新属于每一个人！
-
-[Choir Repeat]
-
-我不是良民！
-
-我不是良民！
-
-我们不是良民！
-
-[Outro]
-
-[Solo Voice]
-
-我不是良民……
-
-[Whisper Echo]
-
-不是良民……
-
-[Gravely Voice]
-
-我他妈就不想做良民！
-
-[Final Whisper]
-
-我只想堂堂正正地活着……
-
-[Fade Out]
-
----
-
 正文适配歌曲
 
 《我不是良民》
@@ -398,171 +145,284 @@ Exclude styles: growl, screaming, rap, EDM, dance beat, cheerful pop, orchestral
 [Intro, stomp and clap only, no vocals, slow and heavy]
 
 [Verse 1, soft young girl child vocal, clear and steady, quiet confidence, acoustic guitar, stomp and clap, gradually building]
+
 邻居们，同事们，朋友们，
+
 抬起头来！
+
 多少心里的苦，
+
 压在胸膛。
+
 问起日子，
+
 只说还能扛，
+
 有些话到了嘴边，
+
 又吞回肚肠。
 
 你看，
+
 千家万户的饭桌上，
+
 多少人压低了声腔。
+
 我沉默，
+
 不是不会想，
+
 是替自己算过了账；
 
 我伪装，
+
 不是看不清，
+
 是替一家老小守着安康。
 
 [Pre-Chorus, acoustic guitar softens, the same child voice, quiet and close]
+
 明明心里有话讲，
+
 却怕说出口，
+
 惹来一身伤。
+
 日子还要一天天过，
+
 谁又能轻易放下重担？
 
 有人夸这叫良民。
+
 良民，
+
 是训良的民。
 
 [Chorus 1, full folk-rock band enters, the lone child lead vocal, clear and firm, steady march rhythm, no kids answering yet]
+
 我不是良民！
+
 我不是良民！
 
 不再把心声吞回胸膛，
+
 有些话，
+
 不能永远不讲！
 
 [Verse 2, steady acoustic guitar, bass and drums intensify, the child vocal stronger but still natural]
+
 有人浇我们怎样想，
+
 有人握着我们的饭碗，
+
 有人把我们隔开，
+
 各自关进一间房。
 
 尺子握在别人手上，
+
 只许比从前的饥荒，
+
 只许看别处的动荡，
+
 不许问问脚下的土壤。
 
 编制、住房、孩子的学堂，
+
 一键清零，清掉半生的奔忙。
 
 群聊里能说天气、工作、家常，
+
 一句越了界，
+
 封群、封号，
+
 群主还要替大家扛。
 
 一个人被带走，
+
 一百个人学会了看风向。
 
 [Verse 3, driving drums, electric guitar accents, the child vocal tense and clear, rising tension]
+
 “经是好经，只是念歪了”，
+
 我曾这样相信。
+
 和尚换了一茶又一茶，
+
 念出来的，
+
 还是同一个腔。
 
 一处说是个例，
+
 处处就不能只当偶然。
+
 同一道伤口，
+
 该问问是谁立下的规章。
 
 向上攀，
+
 一级攀着一级，
+
 向身旁踩，
+
 一脚踩着一脚。
+
 攀得再高，
+
 踩得再狠，
+
 仍在这张网上。
 
 松开手，
+
 收回脚，
+
 去握住身旁，
+
 同样发凉的手掌。
 
 [Build-up, drums gradually accelerating, the child vocal passionate and sincere, a few more kids gradually joining, uneven]
+
 当饭碗见了底，
+
 当欠薪的人还在等，
+
 当断保的日子无人问，
+
 当烂尾楼前又过一春，
+
 当各自捏着的欠条，
+
 凑近一看，
+
 竟是同一张，
 
 当你听见我的难处，
+
 也想起自己的过往，
+
 当那些不敢说的话，
 
 终于有了相似的回响——
+
 若你说半句，
+
 我接半句，
+
 便知道，
+
 我们想的一样。
 
 今天，
+
 我们还是一个个落单的肩膀，
+
 明天，
+
 也许就并成一排。
 
 [Kids choir joins, ragged and uneven, not polished]
+
 你不是一个人，
+
 我也不是一个人。
 
 [Interlude, sudden stop, faint old gramophone crackle, the same young girl reads aloud like a classroom recitation, clear and calm, slightly formal]
+
 清帝退位赵书，
+
 一九一二年。
+
 人心所向，
+
 天命可知，
+
 予亦何忍因一姓之尊荣，
+
 拂兆民之好勿。
+
 特帅皇帝将统治权公诸全国，
+
 定为共和立献国体。
 
 [Spoken Word, the same young girl, low and firm, minimal acoustic guitar, one slow drum beat, serious and resolute]
+
 一百多年前，
+
 皇帝的赵书就认了：
+
 一姓，
+
 不能高于兆民。
+
 若无人敢说，
+
 天命，
+
 又该向谁去打听？
+
 我们不要新的主人——
+
 [almost whispered, alone]
+
 我不是良民。
 
 [Final Verse, stomp and clap return, steady march rhythm, soft kids voices underneath, building]
+
 不再让别人，
+
 替我作答，
+
 不再让别人，
+
 替我定下真假。
+
 良民证，
+
 戴了半生；
+
 欠条，
+
 欠了半生。
 
 欠薪、断保、落空的承诺，
+
 每一笔，
+
 都还算数。
+
 我们不要新的主人，
+
 那张欠条，
+
 还留在桌上——
 该兑现了。
 
 [Final Call, full band, the girl calls out clearly, the kids shout the last line with her]
+
 邻居们！同事们！朋友们！
+
 肩并肩，
+
 挺起胸膛！
 
 [the band cuts on the last word, one beat of complete silence, only stomp and clap]
+
 [Lead vocal alone, a single child voice, plain and steady]
+
 我不是良民！
+
 [Kids answer, close and rough, slightly behind the beat]
+
 我也不是！
+
 [Everyone in unison, hold the last word, stomp and clap continue]
+
 我不是良民！
 
 [Outro, only stomp and clap, slowly fading away like a march passing by, no vocals, no hard cut]
@@ -572,6 +432,9 @@ Exclude styles: growl, screaming, rap, EDM, dance beat, cheerful pop, orchestral
 风格
 
 Style of Music
+
 dark folk-rock march, Mandarin Chinese, 4/4 at 108 BPM, stomp and clap, acoustic guitar, steady drums, bass, simple memorable melody, lead vocal: one young Chinese girl about 9 years old, natural untrained child voice, pure bright timbre, gentle but confident, sincere and unaffected, clear native Mandarin pronunciation, ragged uneven kids chorus, bright innocent voice against a dark defiant march
+
 Exclude styles
+
 adult vocals, male vocals, teenage vocals, auto-tune, vibrato, belting, cute, cartoon, nursery rhyme, lullaby, music box, Disney, cheerful pop, polished school choir, growl, screaming, rap, EDM, dance beat, orchestral
