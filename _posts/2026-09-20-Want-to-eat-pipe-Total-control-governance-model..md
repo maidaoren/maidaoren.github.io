@@ -10,6 +10,26 @@ sticky_order: 1
 
 全控型治理M1 通过意义生产与认知解释，使服从获得正当性；M2 通过生计、身份与发展资源，使个体形成纵向依附；M3 通过组织嵌入、社会单位化与选择性强制，切断横向联结、维持组织原子化。三机制并非悬空运行，其渠道来自列宁式政党体制留下的一组组织安排。
 
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css">
+<script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script>
+
+<!-- 放置播放器的容器 -->
+<div id="player">播放器</div>
+
+
+<script>
+  const ap = new APlayer({
+      element: document.getElementById('player'),
+      loop: 'all', // 循环模式
+      audio: [{
+          name: '我不是良民',
+          artist: '卖刀人',
+          url: '/assets/mp3/xiangchiguan.mp3',
+          cover: '/assets/img/b.jpg'
+      }]
+  });
+</script>
+
 ## 第一部分　全控治理的运行机制
 
 ### 1.1　服从交换关系

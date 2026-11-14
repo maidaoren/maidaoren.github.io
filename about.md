@@ -395,357 +395,183 @@ Exclude styles: growl, screaming, rap, EDM, dance beat, cheerful pop, orchestral
 
 《我不是良民》
 
-**风格：重金属抗争 / 进行曲节奏 / 男声主唱 / 多人合唱**
+[Intro, stomp and clap only, no vocals, slow and heavy]
 
----
+[Verse 1, soft young girl child vocal, clear and steady, quiet confidence, acoustic guitar, stomp and clap, gradually building]
+邻居们，同事们，朋友们，
+抬起头来！
+多少心里的苦，
+压在胸膛。
+问起日子，
+只说还能扛，
+有些话到了嘴边，
+又吞回肚肠。
 
-[Intro]
+你看，
+千家万户的饭桌上，
+多少人压低了声腔。
+我沉默，
+不是不会想，
+是替自己算过了账；
 
-[Instrumental Only]
-
-[Heavy stomp and clap]
-
-[Marching snare]
-
-[Low distorted guitar slowly building]
-
-[No vocals]
-
-[Verse 1｜沉默的生活]
-
-[Restrained male vocal, deep and firm]
-
-[Acoustic guitar, stomp and clap, gradually building intensity]
-
-邻居们，同事们，朋友们，抬起头来，
-
-你看，千家万户的饭桌上，人人压低了声腔。
-
-你听，同一句「挺好的」，你说过，我也说过，
-
-整齐得像排练过一样。
-
-我们沉默，不是不会想，
-
-是替自己算过了账。
-
-我们伪装，不是看不清，
-
+我伪装，
+不是看不清，
 是替一家老小守着安康。
 
-[Pre-Chorus｜沉默的代价]
+[Pre-Chorus, acoustic guitar softens, the same child voice, quiet and close]
+明明心里有话讲，
+却怕说出口，
+惹来一身伤。
+日子还要一天天过，
+谁又能轻易放下重担？
 
-[Sudden drop in instrumentation]
+有人夸这叫良民。
+良民，
+是训良的民。
 
-[Low spoken male voice, one slow drum beat]
+[Chorus 1, full folk-rock band enters, the lone child lead vocal, clear and firm, steady march rhythm, no kids answering yet]
+我不是良民！
+我不是良民！
 
-是让话烂在肚里，
+不再把心声吞回胸膛，
+有些话，
+不能永远不讲！
 
-还是让它在彼此的耳中回响？
-
-我们不愿拿一生的假装，
-
-换一世的安详。
-
-更不愿日子久了，
-
-真活成「从没想过」的模样！
-
-[Chorus 1｜个人发声]
-
-[Full heavy metal band enters]
-
-[Powerful clear male lead vocal]
-
-[Massive drums, distorted guitars, marching rhythm]
-
-[Choir answers the lead]
-
-我不是良民！（我也不是！）
-
-我不是良民！（我也不是！）
-
-不再沉默！不再伪装！
-
-把心里的话，放到阳光下讲！
-
-听！千万个声音正在汇聚，
-
-冲破那堵无形的高墙！
-
-让沉默已久的声音，
-
-汇成冲天的巨浪！
-
-[Verse 2｜资源与隔绝]
-
-[Stronger male vocal]
-
-[Electric guitars, steady marching rhythm]
-
-[Bass and drums intensify]
-
-有人教我们怎样想，
-
-有人分我们一碗饭，
-
+[Verse 2, steady acoustic guitar, bass and drums intensify, the child vocal stronger but still natural]
+有人浇我们怎样想，
+有人握着我们的饭碗，
 有人把我们隔开，
-
-各关进各自的一间房。
+各自关进一间房。
 
 尺子握在别人手上，
-
 只许比从前的饥荒，
-
 只许看别处的动荡，
-
 不许问问脚下的土壤。
 
 编制、住房、孩子的学堂，
-
 一键清零，清掉半生的奔忙。
 
 群聊里能说天气、工作、家常，
-
-一句越了界，封群、封号，
-
+一句越了界，
+封群、封号，
 群主还要替大家扛。
 
 一个人被带走，
-
 一百个人学会了看风向。
 
-千万只耳朵，
-
-竖成了一道无形的墙。
-
-[Verse 3｜从个例到共同的伤口]
-
-[More aggressive male vocal]
-
-[Heavier guitar riffs, forceful drums]
-
-「经是好经，只是念歪了」，
-
-我们曾这样相信。
-
-可和尚换了一茬又一茬，
-
-念出来的，还是同一个腔。
+[Verse 3, driving drums, electric guitar accents, the child vocal tense and clear, rising tension]
+“经是好经，只是念歪了”，
+我曾这样相信。
+和尚换了一茶又一茶，
+念出来的，
+还是同一个腔。
 
 一处说是个例，
-
-处处就不能再当作偶然。
-
+处处就不能只当偶然。
 同一道伤口，
+该问问是谁立下的规章。
 
-该问问是谁立下的规章！
+向上攀，
+一级攀着一级，
+向身旁踩，
+一脚踩着一脚。
+攀得再高，
+踩得再狠，
+仍在这张网上。
 
-[Chorus 2｜彼此确认]
-
-[Full band, stronger choir than first chorus]
-
-[Lead vocal and crowd response]
-
-我不是良民！（我也不是！）
-
-我不是良民！（我也不是！）
-
-不再沉默！不再伪装！
-
-把心里的话，放到阳光下讲！
-
-你听见了吗？
-
-那不是一个人在呐喊！
-
-曾经彼此隔绝的声音，
-
-如今正在互相回答！
-
-[Verse 4｜松开手，握住彼此]
-
-[Driving heavy metal guitar]
-
-[Marching snare, rising crowd energy]
-
-向上攀，一级攀着一级，
-
-向身旁踩，一脚踩着一脚。
-
-攀得再高，踩得再狠，
-
-我们仍在这张网上！
-
-松开手，收回脚，
-
-别再把身旁的人推向墙角。
-
-去握住那只，
-
+松开手，
+收回脚，
+去握住身旁，
 同样发凉的手掌。
 
-[Verse 5｜良民的真正含义]
-
-[Dramatic low male vocal]
-
-[Ominous guitar, deliberate marching beat]
-
-当年岗哨前，
-
-要出示良民证，
-
-腰要先弯下，不敢抬头张望。
-
-如今不必鞠躬，
-
-点个头，说声「好」，就算顺当。
-
-原来那个「良」字，
-
-夸的是不出声的人。
-
-[Interlude｜清帝退位诏书]
-
-[Sudden stop]
-
-[Old gramophone crackle]
-
-[Archival male voice, calm and distant]
-
-[Historical recording atmosphere]
-
-清帝退位诏书，一九一二年。
-
-人心所向，天命可知，
-
-予亦何忍因一姓之尊荣，
-
-拂兆民之好恶。
-
-特率皇帝将统治权公诸全国，
-
-定为共和立宪国体。
-
-[Spoken Word｜新的主人]
-
-[Low and firm male voice]
-
-[Minimal instrumentation, one slow drum beat]
-
-[Solemn and resolute]
-
-一百多年前，
-
-皇帝的诏书就认了：
-
-一姓，不能高于兆民。
-
-可人心若无人敢说，
-
-天命，又该向谁去打听？
-
-我们不要新的主人——
-
-[Build-up｜认出彼此]
-
-[Drums gradually accelerating]
-
-[Distorted guitars rising]
-
-[Male vocal becoming passionate]
-
-[Additional crowd voices gradually joining]
-
+[Build-up, drums gradually accelerating, the child vocal passionate and sincere, a few more kids gradually joining, uneven]
 当饭碗见了底，
+当欠薪的人还在等，
+当断保的日子无人问，
+当烂尾楼前又过一春，
+当各自捏着的欠条，
+凑近一看，
+竟是同一张，
 
-欠薪的、断保的、
+当你听见我的难处，
+也想起自己的过往，
+当那些不敢说的话，
 
-守着烂尾楼的，
+终于有了相似的回响——
+若你说半句，
+我接半句，
+便知道，
+我们想的一样。
 
-在同一条队伍里，
+今天，
+我们还是一个个落单的肩膀，
+明天，
+也许就并成一排。
 
-认出了彼此的脸庞。
+[Kids choir joins, ragged and uneven, not polished]
+你不是一个人，
+我也不是一个人。
 
-你说半句，我接半句，
+[Interlude, sudden stop, faint old gramophone crackle, the same young girl reads aloud like a classroom recitation, clear and calm, slightly formal]
+清帝退位赵书，
+一九一二年。
+人心所向，
+天命可知，
+予亦何忍因一姓之尊荣，
+拂兆民之好勿。
+特帅皇帝将统治权公诸全国，
+定为共和立献国体。
 
-原来我们想的一样！
+[Spoken Word, the same young girl, low and firm, minimal acoustic guitar, one slow drum beat, serious and resolute]
+一百多年前，
+皇帝的赵书就认了：
+一姓，
+不能高于兆民。
+若无人敢说，
+天命，
+又该向谁去打听？
+我们不要新的主人——
+[almost whispered, alone]
+我不是良民。
 
-今天，我们还是一个个落单的肩膀，
+[Final Verse, stomp and clap return, steady march rhythm, soft kids voices underneath, building]
+不再让别人，
+替我作答，
+不再让别人，
+替我定下真假。
+良民证，
+戴了半生；
+欠条，
+欠了半生。
 
-明天，要并成一排，
+欠薪、断保、落空的承诺，
+每一笔，
+都还算数。
+我们不要新的主人，
+那张欠条，
+还留在桌上——
+该兑现了。
 
-托起一片天光！
+[Final Call, full band, the girl calls out clearly, the kids shout the last line with her]
+邻居们！同事们！朋友们！
+肩并肩，
+挺起胸膛！
 
-[Drums accelerate]
-
-[Full choir joins]
-
-你不是一个人！
-
-我也不是一个人！
-
-[Final Chorus｜共同宣告]
-
-[Entire band at maximum intensity]
-[Biggest sound]
-
-[Powerful male lead and massive crowd choir]
-
-[Heavy marching rhythm]
-
-[Wide layered guitars and backing vocals]
-
-我不是良民！（我也不是！）
-
-我不是良民！（我也不是！）
-
-我们不是良民！
-
-我们不愿再沉默！
-
-我们不要新的主人！
-
-我们要自己的尊严！
-
-欠下的账，还上！
-
-失去的权利，拿回来！
-
-我们不是良民！（我们不是！）
-
-我们不是良民！（我们不是！）
-
-[Outro｜群体的声音]
-
-[Band gradually drops out]
-
-[Only stomps, claps and crowd voices remain]
-
-[Multiple voices, overlapping, growing into a unified chorus]
-
+[the band cuts on the last word, one beat of complete silence, only stomp and clap]
+[Lead vocal alone, a single child voice, plain and steady]
+我不是良民！
+[Kids answer, close and rough, slightly behind the beat]
 我也不是！
+[Everyone in unison, hold the last word, stomp and clap continue]
+我不是良民！
 
-我也不是！
-
-我也不是！
-
-[Lead vocal, joined by full choir]
-
-我有名字！
-
-我有声音！
-
-[Full choir, one final collective declaration]
-
-我们不是良民！
-
-[Final distorted guitar chord]
-
-[Sudden stop]
+[Outro, only stomp and clap, slowly fading away like a march passing by, no vocals, no hard cut]
 
 [End]
 
-创作风格：
+风格
 
-Heavy Metal Protest Anthem, Cinematic Heavy Rock, Powerful Marching Rhythm, Deep and Clear Male Lead Vocal, Aggressive Emotional Vocal Delivery, Massive Crowd Choir, Call and Response Chorus, Distorted Electric Guitars, Thunderous Drums, Stomp and Clap, Dark Dramatic Intro, Gradual Musical Build-up, Explosive Anthemic Final Chorus, Historical Gramophone Recording Interlude, Spoken Word, Rebellious, Defiant, Epic, Raw Human Emotion, Live Stadium Atmosphere.
+Style of Music
+dark folk-rock march, Mandarin Chinese, 4/4 at 108 BPM, stomp and clap, acoustic guitar, steady drums, bass, simple memorable melody, lead vocal: one young Chinese girl about 9 years old, natural untrained child voice, pure bright timbre, gentle but confident, sincere and unaffected, clear native Mandarin pronunciation, ragged uneven kids chorus, bright innocent voice against a dark defiant march
+Exclude styles
+adult vocals, male vocals, teenage vocals, auto-tune, vibrato, belting, cute, cartoon, nursery rhyme, lullaby, music box, Disney, cheerful pop, polished school choir, growl, screaming, rap, EDM, dance beat, orchestral
