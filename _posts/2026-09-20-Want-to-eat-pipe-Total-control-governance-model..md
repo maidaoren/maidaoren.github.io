@@ -10,6 +10,10 @@ sticky_order: 1
 
 全控型治理M1 通过意义生产与认知解释，使服从获得正当性；M2 通过生计、身份与发展资源，使个体形成纵向依附；M3 通过组织嵌入、社会单位化与选择性强制，切断横向联结、维持组织原子化。三机制并非悬空运行，其渠道来自列宁式政党体制留下的一组组织安排。
 
+《想吃管全控治理模型》是作者通过自己的观察和生活体验，完成的一套解释国家权力如何进入社会、影响社会成员的认知、生计和行为，并使社会逐渐形成特定服从关系的社会治理机制模型。
+
+中央与地方政府的行政关系，政治精英和权力集团如何运作，地缘政治等需要进一步扩展或更专业的人完成。
+
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css">
 <script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script>
 
