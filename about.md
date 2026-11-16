@@ -334,7 +334,7 @@ Exclude styles: growl, screaming, rap, EDM, dance beat, cheerful pop, orchestral
 
 [Interlude, sudden stop, faint old gramophone crackle, the same young girl reads aloud like a classroom recitation, clear and calm, slightly formal]
 
-清帝退位赵书，
+清帝退位诏书，
 
 一九一二年。
 
@@ -344,17 +344,17 @@ Exclude styles: growl, screaming, rap, EDM, dance beat, cheerful pop, orchestral
 
 予亦何忍因一姓之尊荣，
 
-拂兆民之好勿。
+拂兆民之好恶。
 
-特帅皇帝将统治权公诸全国，
+特率皇帝将统治权公诸全国，
 
-定为共和立献国体。
+定为共和立宪国体。
 
 [Spoken Word, the same young girl, low and firm, minimal acoustic guitar, one slow drum beat, serious and resolute]
 
 一百多年前，
 
-皇帝的赵书就认了：
+皇帝的诏书就认了：
 
 一姓，
 
