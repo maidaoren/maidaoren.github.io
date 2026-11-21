@@ -10,6 +10,8 @@ permalink: /about/
 
 战歌《我不是良民》
 
+《想吃管：全控治理模型》内容基于现实罗列以及提炼机制组合而成的模型，用于分析和理解社会的运行，希望有人能通过阅读我的模型而走出个人和家庭的困境，获得幸福的人生，而不是跟我一样陷入绝境。
+
 ---
 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css">
@@ -212,7 +214,7 @@ Exclude styles: growl, screaming, rap, EDM, dance beat, cheerful pop, orchestral
 
 [Verse 2, steady acoustic guitar, bass and drums intensify, the child vocal stronger but still natural]
 
-有人浇我们怎样想，
+有人教我们怎样想，
 
 有人握着我们的饭碗，
 
@@ -438,3 +440,9 @@ dark folk-rock march, Mandarin Chinese, 4/4 at 108 BPM, stomp and clap, acoustic
 Exclude styles
 
 adult vocals, male vocals, teenage vocals, auto-tune, vibrato, belting, cute, cartoon, nursery rhyme, lullaby, music box, Disney, cheerful pop, polished school choir, growl, screaming, rap, EDM, dance beat, orchestral
+
+---
+
+《般若波罗蜜多心经》
+
+观自在菩萨，行深般若波罗蜜多时，照见五蕴皆空，度一切苦厄。舍利子，色不异空，空不异色。色即是空，空即是色。受、想、行、识，亦复如是。舍利子，是诸法空相，不生不灭，不垢不净，不增不减。是故空中无色，无受、想、行、识；无眼、耳、鼻、舌、身、意；无色、声、香、味、触、法；无眼界，乃至无意识界；无无明，亦无无明尽，乃至无老死，亦无老死尽；无苦、集、灭、道；无智亦无得。以无所得故，菩提萨埵，依般若波罗蜜多故，心无挂碍。无挂碍故，无有恐怖，远离颠倒梦想，究竟涅槃。三世诸佛，依般若波罗蜜多故，得阿耨多罗三藐三菩提。故知般若波罗蜜多，是大神咒，是大明咒，是无上咒，是无等等咒，能除一切苦，真实不虚。故说般若波罗蜜多咒，即说咒曰：揭谛揭谛，波罗揭谛，波罗僧揭谛，菩提萨婆诃。
