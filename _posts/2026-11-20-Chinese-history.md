@@ -1,6 +1,6 @@
 ---
 layout: post
-title: '中国传统思想—政治制度转化模型'
+title: '中国传统政治思想与现代国家治理：历史传承、制度转译与政治比较'
 date: 2026-11-20
 sticky: true
 sticky_order: 1
